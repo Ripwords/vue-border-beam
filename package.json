@@ -2,7 +2,23 @@
   "name": "vue-border-beam",
   "version": "1.0.0",
   "description": "Animated border beam effect for Vue 3",
+  "keywords": [
+    "animation",
+    "beam",
+    "border",
+    "css",
+    "effect",
+    "glow",
+    "vue",
+    "vue3"
+  ],
+  "license": "MIT",
+  "author": "",
+  "files": [
+    "dist"
+  ],
   "type": "module",
+  "sideEffects": false,
   "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -18,44 +34,48 @@
       }
     }
   },
-  "files": ["dist"],
-  "sideEffects": false,
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "vue-tsc --noEmit",
-    "playground": "npm -C playground run dev",
+    "playground": "bun -C playground run dev",
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "prepublishOnly": "npm run build"
+    "format": "oxfmt --write .",
+    "lint": "oxlint --fix",
+    "lint:check": "oxlint",
+    "format:check": "oxfmt --check .",
+    "prepublishOnly": "nr lint:check && nr format:check && nr build",
+    "prepare": "husky",
+    "fmt": "oxfmt --write . && oxlint --fix"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.6",
+    "@vue/test-utils": "^2.4.6",
+    "husky": "^9.1.7",
+    "jsdom": "^29.0.2",
+    "lint-staged": "^16.4.0",
+    "oxfmt": "^0.45.0",
+    "oxlint": "^1.60.0",
+    "tsdown": "^0.21.8",
+    "typescript": "^6.0.2",
+    "vitepress": "^1.6.4",
+    "vitest": "^4.1.4",
+    "vue": "^3.5.32",
+    "vue-tsc": "^3.2.6"
   },
   "peerDependencies": {
     "vue": ">=3.3.0"
   },
-  "devDependencies": {
-    "vue": "^3.5.0",
-    "typescript": "^5.7.0",
-    "tsdown": "^0.21.0",
-    "@vitejs/plugin-vue": "^5.2.0",
-    "vue-tsc": "^2.2.0",
-    "vitest": "^3.1.0",
-    "@vue/test-utils": "^2.4.0",
-    "jsdom": "^26.0.0",
-    "vitepress": "^1.6.0"
-  },
-  "keywords": [
-    "vue",
-    "vue3",
-    "animation",
-    "border",
-    "beam",
-    "glow",
-    "effect",
-    "css"
-  ],
-  "author": "",
-  "license": "MIT"
+  "lint-staged": {
+    "*.{js,ts,vue,json,md}": [
+      "oxfmt --write"
+    ],
+    "*.{js,ts,vue}": [
+      "oxlint --fix"
+    ]
+  }
 }
