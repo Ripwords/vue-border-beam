@@ -1,5 +1,28 @@
 # Changelog
 
+## v0.1.1
+
+[compare changes](https://github.com/Ripwords/vue-border-beam/compare/v0.1.0...v0.1.1)
+
+### 🩹 Fixes
+
+- Wrap BorderBeam demos in ClientOnly for SSR hydration ([3e3fea6](https://github.com/Ripwords/vue-border-beam/commit/3e3fea6))
+- Replace static color gradients with rotating conic-gradients ([1c7c090](https://github.com/Ripwords/vue-border-beam/commit/1c7c090))
+
+### 📖 Documentation
+
+- Add README and GitHub Pages deployment ([d824dbe](https://github.com/Ripwords/vue-border-beam/commit/d824dbe))
+- Add package manager tabs and live demos to landing page ([ad1649f](https://github.com/Ripwords/vue-border-beam/commit/ad1649f))
+
+### 🏡 Chore
+
+- Update .gitignore ([b6f17f2](https://github.com/Ripwords/vue-border-beam/commit/b6f17f2))
+- Update .gitignore to filter playwright ([e420dbd](https://github.com/Ripwords/vue-border-beam/commit/e420dbd))
+
+### ❤️ Contributors
+
+- JJ <teohjjteoh@gmail.com>
+
 ## v0.1.0
 
 ### 🚀 Enhancements
