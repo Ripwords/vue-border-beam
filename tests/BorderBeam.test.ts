@@ -37,6 +37,16 @@ describe('BorderBeam', () => {
       })
       expect(wrapper.find('[data-beam]').exists()).toBe(true)
     })
+
+    it('renders inline style tag with beam CSS', () => {
+      const wrapper = mount(BorderBeam, {
+        slots: { default: '<div>Hello</div>' },
+      })
+      // Style tag is rendered as a sibling via <component :is="'style'">
+      const html = wrapper.html()
+      expect(html).toContain('@property')
+      expect(html).toContain('beam-spin')
+    })
   })
 
   describe('active state', () => {

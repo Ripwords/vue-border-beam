@@ -58,8 +58,8 @@ function detectChildRadius() {
   if (!el) return
   const child = el.firstElementChild as HTMLElement | null
   if (!child) return
-  const computed = getComputedStyle(child)
-  const raw = parseFloat(computed.borderTopLeftRadius)
+  const cs = getComputedStyle(child)
+  const raw = parseFloat(cs.borderTopLeftRadius)
   if (!isNaN(raw) && raw > 0) {
     detectedRadius.value = raw
   }
