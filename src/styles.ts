@@ -153,137 +153,76 @@ const colorPalettes = {
 };
 
 /**
- * Small size color palettes (compact gradients for button-sized elements)
+ * Color stops for rotating conic-gradient beam colors.
+ * Colors are evenly distributed around the circle and rotate
+ * at a golden-ratio-offset speed from the beam, so no two
+ * consecutive rotations show identical colors at the same border position.
  */
-const smallColorPalettes = {
-  colorful: {
-    border: [
-      { color: "rgb(50, 200, 80)", pos: "2% 68%", size: "9px 18px" },
-      { color: "rgb(30, 185, 170)", pos: "2% 68%", size: "4px 8px" },
-      { color: "rgb(255, 120, 40)", pos: "72% -3%", size: "59px 9px" },
-      { color: "rgb(100, 70, 255)", pos: "74% 100%", size: "42px 7px" },
-      { color: "rgb(240, 50, 180)", pos: "100% 27%", size: "10px 17px" },
-      { color: "rgb(180, 40, 240)", pos: "100% 27%", size: "10px 18px" },
-      { color: "rgb(40, 140, 255)", pos: "100% 27%", size: "5px 10px" },
-      { color: "rgb(255, 50, 100)", pos: "100% 27%", size: "11px 12px" },
-    ],
-    inner: [
-      { color: "rgba(50, 200, 80, 0.5)", pos: "2% 68%", size: "9px 18px" },
-      { color: "rgba(30, 185, 170, 0.45)", pos: "2% 68%", size: "4px 8px" },
-      { color: "rgba(255, 120, 40, 0.35)", pos: "72% -3%", size: "59px 9px" },
-      { color: "rgba(100, 70, 255, 0.35)", pos: "74% 100%", size: "42px 7px" },
-      { color: "rgba(240, 50, 180, 0.3)", pos: "100% 27%", size: "10px 17px" },
-      { color: "rgba(180, 40, 240, 0.4)", pos: "100% 27%", size: "10px 18px" },
-      { color: "rgba(40, 140, 255, 0.3)", pos: "100% 27%", size: "5px 10px" },
-      { color: "rgba(255, 50, 100, 0.3)", pos: "100% 27%", size: "11px 12px" },
-    ],
-  },
-  mono: {
-    border: [
-      { color: "rgb(160, 160, 160)", pos: "2% 68%", size: "9px 18px" },
-      { color: "rgb(140, 140, 140)", pos: "2% 68%", size: "4px 8px" },
-      { color: "rgb(180, 180, 180)", pos: "72% -3%", size: "59px 9px" },
-      { color: "rgb(150, 150, 150)", pos: "74% 100%", size: "42px 7px" },
-      { color: "rgb(170, 170, 170)", pos: "100% 27%", size: "10px 17px" },
-      { color: "rgb(155, 155, 155)", pos: "100% 27%", size: "10px 18px" },
-      { color: "rgb(145, 145, 145)", pos: "100% 27%", size: "5px 10px" },
-      { color: "rgb(165, 165, 165)", pos: "100% 27%", size: "11px 12px" },
-    ],
-    inner: [
-      { color: "rgba(160, 160, 160, 0.25)", pos: "2% 68%", size: "9px 18px" },
-      { color: "rgba(140, 140, 140, 0.22)", pos: "2% 68%", size: "4px 8px" },
-      { color: "rgba(180, 180, 180, 0.17)", pos: "72% -3%", size: "59px 9px" },
-      { color: "rgba(150, 150, 150, 0.17)", pos: "74% 100%", size: "42px 7px" },
-      { color: "rgba(170, 170, 170, 0.15)", pos: "100% 27%", size: "10px 17px" },
-      { color: "rgba(155, 155, 155, 0.20)", pos: "100% 27%", size: "10px 18px" },
-      { color: "rgba(145, 145, 145, 0.15)", pos: "100% 27%", size: "5px 10px" },
-      { color: "rgba(165, 165, 165, 0.15)", pos: "100% 27%", size: "11px 12px" },
-    ],
-  },
-  ocean: {
-    border: [
-      { color: "rgb(60, 140, 200)", pos: "2% 68%", size: "9px 18px" },
-      { color: "rgb(50, 120, 180)", pos: "2% 68%", size: "4px 8px" },
-      { color: "rgb(100, 80, 220)", pos: "72% -3%", size: "59px 9px" },
-      { color: "rgb(80, 100, 255)", pos: "74% 100%", size: "42px 7px" },
-      { color: "rgb(120, 70, 240)", pos: "100% 27%", size: "10px 17px" },
-      { color: "rgb(90, 80, 220)", pos: "100% 27%", size: "10px 18px" },
-      { color: "rgb(70, 110, 255)", pos: "100% 27%", size: "5px 10px" },
-      { color: "rgb(110, 90, 230)", pos: "100% 27%", size: "11px 12px" },
-    ],
-    inner: [
-      { color: "rgba(60, 140, 200, 0.5)", pos: "2% 68%", size: "9px 18px" },
-      { color: "rgba(50, 120, 180, 0.45)", pos: "2% 68%", size: "4px 8px" },
-      { color: "rgba(100, 80, 220, 0.35)", pos: "72% -3%", size: "59px 9px" },
-      { color: "rgba(80, 100, 255, 0.35)", pos: "74% 100%", size: "42px 7px" },
-      { color: "rgba(120, 70, 240, 0.3)", pos: "100% 27%", size: "10px 17px" },
-      { color: "rgba(90, 80, 220, 0.4)", pos: "100% 27%", size: "10px 18px" },
-      { color: "rgba(70, 110, 255, 0.3)", pos: "100% 27%", size: "5px 10px" },
-      { color: "rgba(110, 90, 230, 0.3)", pos: "100% 27%", size: "11px 12px" },
-    ],
-  },
-  sunset: {
-    border: [
-      { color: "rgb(255, 180, 50)", pos: "2% 68%", size: "9px 18px" },
-      { color: "rgb(255, 150, 40)", pos: "2% 68%", size: "4px 8px" },
-      { color: "rgb(255, 80, 60)", pos: "72% -3%", size: "59px 9px" },
-      { color: "rgb(255, 100, 80)", pos: "74% 100%", size: "42px 7px" },
-      { color: "rgb(255, 60, 80)", pos: "100% 27%", size: "10px 17px" },
-      { color: "rgb(255, 120, 60)", pos: "100% 27%", size: "10px 18px" },
-      { color: "rgb(255, 200, 50)", pos: "100% 27%", size: "5px 10px" },
-      { color: "rgb(255, 90, 70)", pos: "100% 27%", size: "11px 12px" },
-    ],
-    inner: [
-      { color: "rgba(255, 180, 50, 0.5)", pos: "2% 68%", size: "9px 18px" },
-      { color: "rgba(255, 150, 40, 0.45)", pos: "2% 68%", size: "4px 8px" },
-      { color: "rgba(255, 80, 60, 0.35)", pos: "72% -3%", size: "59px 9px" },
-      { color: "rgba(255, 100, 80, 0.35)", pos: "74% 100%", size: "42px 7px" },
-      { color: "rgba(255, 60, 80, 0.3)", pos: "100% 27%", size: "10px 17px" },
-      { color: "rgba(255, 120, 60, 0.4)", pos: "100% 27%", size: "10px 18px" },
-      { color: "rgba(255, 200, 50, 0.3)", pos: "100% 27%", size: "5px 10px" },
-      { color: "rgba(255, 90, 70, 0.3)", pos: "100% 27%", size: "11px 12px" },
-    ],
-  },
+const conicColors: Record<BorderBeamColorVariant, string[]> = {
+  colorful: [
+    "rgb(255, 50, 100)",
+    "rgb(255, 120, 40)",
+    "rgb(50, 200, 80)",
+    "rgb(30, 185, 170)",
+    "rgb(40, 140, 255)",
+    "rgb(100, 70, 255)",
+    "rgb(180, 40, 240)",
+    "rgb(240, 50, 180)",
+  ],
+  mono: [
+    "rgb(180, 180, 180)",
+    "rgb(155, 155, 155)",
+    "rgb(170, 170, 170)",
+    "rgb(145, 145, 145)",
+    "rgb(165, 165, 165)",
+    "rgb(150, 150, 150)",
+    "rgb(175, 175, 175)",
+    "rgb(160, 160, 160)",
+  ],
+  ocean: [
+    "rgb(100, 80, 220)",
+    "rgb(60, 120, 255)",
+    "rgb(80, 100, 200)",
+    "rgb(50, 140, 220)",
+    "rgb(70, 130, 255)",
+    "rgb(120, 80, 255)",
+    "rgb(130, 70, 255)",
+    "rgb(90, 110, 230)",
+  ],
+  sunset: [
+    "rgb(255, 80, 50)",
+    "rgb(255, 160, 40)",
+    "rgb(255, 120, 60)",
+    "rgb(255, 200, 50)",
+    "rgb(255, 100, 80)",
+    "rgb(255, 180, 60)",
+    "rgb(255, 60, 60)",
+    "rgb(255, 140, 50)",
+  ],
 };
 
-function getSmallColorGradients(colorVariant: BorderBeamColorVariant): string {
-  const palette = smallColorPalettes[colorVariant];
-  return palette.border
-    .map((c) => `radial-gradient(ellipse ${c.size} at ${c.pos}, ${c.color}, transparent)`)
-    .join(",\n    ");
+/** Golden ratio — color rotation period = beam period × φ */
+const GOLDEN_RATIO = 1.618;
+
+function applyAlpha(color: string, alpha: number): string {
+  return color.replace("rgb(", "rgba(").replace(")", `, ${alpha})`);
 }
 
-function getSmallInnerGradients(colorVariant: BorderBeamColorVariant): string {
-  const palette = smallColorPalettes[colorVariant];
-  return palette.inner
-    .map((c) => `radial-gradient(ellipse ${c.size} at ${c.pos}, ${c.color}, transparent)`)
-    .join(",\n    ");
-}
-
-function getColorGradients(colorVariant: BorderBeamColorVariant): string {
-  const palette = colorPalettes[colorVariant];
-  return palette.border
-    .map((c) => `radial-gradient(ellipse ${c.size} at ${c.pos}, ${c.color}, transparent)`)
-    .join(",\n    ");
-}
-
-function getInnerGradients(colorVariant: BorderBeamColorVariant): string {
-  const palette = colorPalettes[colorVariant];
-  // Mono variant gets 50% lower opacity
-  const baseOpacity = colorVariant === "mono" ? 0.225 : 0.45;
-  return palette.border
-    .map((c) => {
-      const rgba = c.color.replace("rgb(", "rgba(").replace(")", `, ${baseOpacity})`);
-      const smallerSize = c.size
-        .split(" ")
-        .map((s) => {
-          const val = parseInt(s);
-          return `${Math.round(val * 0.9)}px`;
-        })
-        .join(" ");
-      return `radial-gradient(ellipse ${smallerSize} at ${c.pos}, ${rgba}, transparent)`;
-    })
-    .join(",\n    ");
+function getConicColorGradient(
+  colorVariant: BorderBeamColorVariant,
+  id: string,
+  alpha?: number,
+): string {
+  const colors = conicColors[colorVariant];
+  const count = colors.length;
+  const stops = colors.map((color, i) => {
+    const pos = ((i / count) * 100).toFixed(1);
+    const c = alpha != null ? applyAlpha(color, alpha) : color;
+    return `${c} ${pos}%`;
+  });
+  const firstColor = alpha != null ? applyAlpha(colors[0], alpha) : colors[0];
+  stops.push(`${firstColor} 100%`);
+  return `conic-gradient(from var(--beam-color-angle-${id}), ${stops.join(", ")})`;
 }
 
 function getSpikeColors(colorVariant: BorderBeamColorVariant, isDark: boolean) {
@@ -744,8 +683,11 @@ function generateSmallVariantCSS(options: GenerateStylesOptions): string {
         transparent 78%, transparent 100%
       )`;
 
-  const colorGradients = getSmallColorGradients(colorVariant);
-  const innerGradients = getSmallInnerGradients(colorVariant);
+  const colorGradients = getConicColorGradient(colorVariant, id);
+  // sm inner mask has no edge-fade — covers full interior, so keep alpha very low
+  const innerAlpha = colorVariant === "mono" ? 0.008 : 0.015;
+  const innerGradients = getConicColorGradient(colorVariant, id, innerAlpha);
+  const colorDuration = (duration * GOLDEN_RATIO).toFixed(2);
 
   const bloomGradient = isDark
     ? `conic-gradient(
@@ -796,6 +738,12 @@ function generateSmallVariantCSS(options: GenerateStylesOptions): string {
   inherits: true;
 }
 
+@property --beam-color-angle-${id} {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: true;
+}
+
 @property --beam-opacity-${id} {
   syntax: "<number>";
   initial-value: 0;
@@ -811,12 +759,14 @@ function generateSmallVariantCSS(options: GenerateStylesOptions): string {
 [data-beam="${id}"][data-active] {
   animation:
     beam-spin-${id} ${duration}s linear infinite,
+    beam-color-spin-${id} ${colorDuration}s linear infinite,
     beam-fade-in-${id} 0.6s ease forwards;
 }
 
 [data-beam="${id}"][data-fading] {
   animation:
     beam-spin-${id} ${duration}s linear infinite,
+    beam-color-spin-${id} ${colorDuration}s linear infinite,
     beam-fade-out-${id} 0.5s ease forwards;
 }
 
@@ -906,6 +856,10 @@ function generateSmallVariantCSS(options: GenerateStylesOptions): string {
   to { --beam-angle-${id}: 360deg; }
 }
 
+@keyframes beam-color-spin-${id} {
+  to { --beam-color-angle-${id}: 360deg; }
+}
+
 @keyframes beam-fade-in-${id} {
   to { --beam-opacity-${id}: 1; }
 }
@@ -985,8 +939,10 @@ function generateBorderVariantCSS(options: GenerateStylesOptions): string {
         transparent 78%, transparent 100%
       )`;
 
-  const colorGradients = getColorGradients(colorVariant);
-  const innerGradients = getInnerGradients(colorVariant);
+  const colorGradients = getConicColorGradient(colorVariant, id);
+  const innerAlpha = colorVariant === "mono" ? 0.03 : 0.06;
+  const innerGradients = getConicColorGradient(colorVariant, id, innerAlpha);
+  const colorDuration = (duration * GOLDEN_RATIO).toFixed(2);
 
   const bloomGradient = isDark
     ? `conic-gradient(
@@ -1027,6 +983,12 @@ function generateBorderVariantCSS(options: GenerateStylesOptions): string {
   inherits: true;
 }
 
+@property --beam-color-angle-${id} {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: true;
+}
+
 @property --beam-opacity-${id} {
   syntax: "<number>";
   initial-value: 0;
@@ -1042,12 +1004,14 @@ function generateBorderVariantCSS(options: GenerateStylesOptions): string {
 [data-beam="${id}"][data-active] {
   animation:
     beam-spin-${id} ${duration}s linear infinite,
+    beam-color-spin-${id} ${colorDuration}s linear infinite,
     beam-fade-in-${id} 0.6s ease forwards;
 }
 
 [data-beam="${id}"][data-fading] {
   animation:
     beam-spin-${id} ${duration}s linear infinite,
+    beam-color-spin-${id} ${colorDuration}s linear infinite,
     beam-fade-out-${id} 0.5s ease forwards;
 }
 
@@ -1155,6 +1119,10 @@ function generateBorderVariantCSS(options: GenerateStylesOptions): string {
 
 @keyframes beam-spin-${id} {
   to { --beam-angle-${id}: 360deg; }
+}
+
+@keyframes beam-color-spin-${id} {
+  to { --beam-color-angle-${id}: 360deg; }
 }
 
 @keyframes beam-fade-in-${id} {
