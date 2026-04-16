@@ -2,9 +2,25 @@
 
 ## Installation
 
-```bash
+::: code-group
+
+```bash [bun]
+bun add vue-border-beam
+```
+
+```bash [pnpm]
+pnpm add vue-border-beam
+```
+
+```bash [npm]
 npm install vue-border-beam
 ```
+
+```bash [yarn]
+yarn add vue-border-beam
+```
+
+:::
 
 ## Basic Usage
 
