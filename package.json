@@ -1,6 +1,6 @@
 {
   "name": "vue-border-beam",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Animated border beam effect for Vue 3",
   "keywords": [
     "animation",
@@ -48,13 +48,19 @@
     "lint": "oxlint --fix",
     "lint:check": "oxlint",
     "format:check": "oxfmt --check .",
-    "prepublishOnly": "nr lint:check && nr format:check && nr build",
+    "changelog": "changelogen --release",
+    "prerelease": "nr lint:check && nr format:check && nr build",
+    "release": "nr prerelease && nr changelog && npm publish --access public",
+    "release:minor": "nr prerelease && nr changelog -- --minor && npm publish --access public",
+    "release:major": "nr prerelease && nr changelog -- --major && npm publish --access public",
+    "postrelease": "git push --follow-tags",
     "prepare": "husky",
     "fmt": "oxfmt --write . && oxlint --fix"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.6",
     "@vue/test-utils": "^2.4.6",
+    "changelogen": "^0.6.2",
     "husky": "^9.1.7",
     "jsdom": "^29.0.2",
     "lint-staged": "^16.4.0",
