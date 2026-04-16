@@ -1,0 +1,61 @@
+{
+  "name": "vue-border-beam",
+  "version": "1.0.0",
+  "description": "Animated border beam effect for Vue 3",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": ["dist"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "vue-tsc --noEmit",
+    "playground": "npm -C playground run dev",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "vue": ">=3.3.0"
+  },
+  "devDependencies": {
+    "vue": "^3.5.0",
+    "typescript": "^5.7.0",
+    "tsdown": "^0.9.0",
+    "unplugin-vue": "^7.0.0",
+    "vue-tsc": "^2.2.0",
+    "vitest": "^3.1.0",
+    "@vue/test-utils": "^2.4.0",
+    "jsdom": "^26.0.0",
+    "vitepress": "^1.6.0"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "animation",
+    "border",
+    "beam",
+    "glow",
+    "effect",
+    "css"
+  ],
+  "author": "",
+  "license": "MIT"
+}
