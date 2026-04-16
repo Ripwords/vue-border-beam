@@ -1,14 +1,14 @@
-import { createApp } from 'vue'
+import { createApp } from "vue";
 
 export function withSetup<T>(composable: () => T): { result: T; unmount: () => void } {
-  let result!: T
+  let result!: T;
   const app = createApp({
     setup() {
-      result = composable()
-      return () => {}
+      result = composable();
+      return () => {};
     },
-  })
-  const div = document.createElement('div')
-  app.mount(div)
-  return { result, unmount: () => app.unmount() }
+  });
+  const div = document.createElement("div");
+  app.mount(div);
+  return { result, unmount: () => app.unmount() };
 }

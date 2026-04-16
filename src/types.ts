@@ -4,12 +4,12 @@
  * - 'md': Medium card-sized with full border glow
  * - 'line': Bottom-only traveling glow with breathe and spike animations
  */
-export type BorderBeamSize = 'sm' | 'md' | 'line'
+export type BorderBeamSize = "sm" | "md" | "line";
 
 /**
  * Theme mode for adapting beam colors to background
  */
-export type BorderBeamTheme = 'dark' | 'light' | 'auto'
+export type BorderBeamTheme = "dark" | "light" | "auto";
 
 /**
  * Color variant for the beam effect
@@ -18,27 +18,27 @@ export type BorderBeamTheme = 'dark' | 'light' | 'auto'
  * - 'ocean': Blue and purple tones
  * - 'sunset': Warm orange, yellow, and red tones
  */
-export type BorderBeamColorVariant = 'colorful' | 'mono' | 'ocean' | 'sunset'
+export type BorderBeamColorVariant = "colorful" | "mono" | "ocean" | "sunset";
 
 /**
  * Configuration for a size preset
  */
 export interface SizeConfig {
-  borderRadius: number
-  borderWidth: number
-  width?: number
-  height?: number
+  borderRadius: number;
+  borderWidth: number;
+  width?: number;
+  height?: number;
 }
 
 /**
  * Theme color configuration
  */
 export interface ThemeColors {
-  strokeOpacity: number
-  innerOpacity: number
-  bloomOpacity: number
-  innerShadow: string
-  saturation: number
+  strokeOpacity: number;
+  innerOpacity: number;
+  bloomOpacity: number;
+  innerShadow: string;
+  saturation: number;
 }
 
 /**
@@ -46,25 +46,25 @@ export interface ThemeColors {
  */
 export interface BorderBeamProps {
   /** Size/type preset @default 'md' */
-  size?: BorderBeamSize
+  size?: BorderBeamSize;
   /** Color variant @default 'colorful' */
-  colorVariant?: BorderBeamColorVariant
+  colorVariant?: BorderBeamColorVariant;
   /** Theme mode @default 'dark' */
-  theme?: BorderBeamTheme
+  theme?: BorderBeamTheme;
   /** Disable hue-shift animation @default false */
-  staticColors?: boolean
+  staticColors?: boolean;
   /** Rotation/travel duration in seconds @default 1.96 for border, 2.4 for line */
-  duration?: number
+  duration?: number;
   /** Whether the animation is active @default true */
-  active?: boolean
+  active?: boolean;
   /** Custom border radius in px. Auto-detects from child if omitted. */
-  borderRadius?: number
+  borderRadius?: number;
   /** Brightness multiplier @default 1.3 */
-  brightness?: number
+  brightness?: number;
   /** Saturation multiplier @default theme default */
-  saturation?: number
+  saturation?: number;
   /** Hue rotation range in degrees @default 30 */
-  hueRange?: number
+  hueRange?: number;
   /** Effect strength/opacity 0-1. Only affects beam layers. @default 1 */
-  strength?: number
+  strength?: number;
 }

@@ -1,9 +1,9 @@
-import type { SizeConfig, ThemeColors, BorderBeamColorVariant } from './types';
+import type { SizeConfig, ThemeColors, BorderBeamColorVariant } from "./types";
 
 /**
  * Size presets for border radius and dimensions
  */
-export const sizePresets: Record<'sm' | 'md' | 'line', SizeConfig> = {
+export const sizePresets: Record<"sm" | "md" | "line", SizeConfig> = {
   sm: {
     borderRadius: 18,
     borderWidth: 1,
@@ -23,20 +23,23 @@ export const sizePresets: Record<'sm' | 'md' | 'line', SizeConfig> = {
 /**
  * Per-size theme presets matching the tuned v5 control panel defaults
  */
-export const sizeThemePresets: Record<'sm' | 'md' | 'line', Record<'dark' | 'light', ThemeColors>> = {
+export const sizeThemePresets: Record<
+  "sm" | "md" | "line",
+  Record<"dark" | "light", ThemeColors>
+> = {
   sm: {
     dark: {
       strokeOpacity: 0.48,
       innerOpacity: 0.7,
       bloomOpacity: 0.8,
-      innerShadow: 'rgba(255, 255, 255, 0.3)',
+      innerShadow: "rgba(255, 255, 255, 0.3)",
       saturation: 1.2,
     },
     light: {
       strokeOpacity: 0.33,
       innerOpacity: 0.46,
       bloomOpacity: 0.54,
-      innerShadow: 'rgba(0, 0, 0, 0.14)',
+      innerShadow: "rgba(0, 0, 0, 0.14)",
       saturation: 0.96,
     },
   },
@@ -45,14 +48,14 @@ export const sizeThemePresets: Record<'sm' | 'md' | 'line', Record<'dark' | 'lig
       strokeOpacity: 0.48,
       innerOpacity: 0.7,
       bloomOpacity: 0.8,
-      innerShadow: 'rgba(255, 255, 255, 0.27)',
+      innerShadow: "rgba(255, 255, 255, 0.27)",
       saturation: 1.2,
     },
     light: {
       strokeOpacity: 0.33,
       innerOpacity: 0.46,
       bloomOpacity: 0.54,
-      innerShadow: 'rgba(0, 0, 0, 0.14)',
+      innerShadow: "rgba(0, 0, 0, 0.14)",
       saturation: 0.96,
     },
   },
@@ -61,14 +64,14 @@ export const sizeThemePresets: Record<'sm' | 'md' | 'line', Record<'dark' | 'lig
       strokeOpacity: 0.72,
       innerOpacity: 0.7,
       bloomOpacity: 0.8,
-      innerShadow: 'rgba(255, 255, 255, 0.1)',
+      innerShadow: "rgba(255, 255, 255, 0.1)",
       saturation: 1.2,
     },
     light: {
       strokeOpacity: 0.72,
       innerOpacity: 0.7,
       bloomOpacity: 0.8,
-      innerShadow: 'rgba(0, 0, 0, 0.14)',
+      innerShadow: "rgba(0, 0, 0, 0.14)",
       saturation: 1.2,
     },
   },
@@ -78,7 +81,7 @@ export const sizeThemePresets: Record<'sm' | 'md' | 'line', Record<'dark' | 'lig
  * @deprecated Use `sizeThemePresets` for per-size theme values.
  * Retained for backward compatibility — maps to `md` size presets.
  */
-export const themeColors: Record<'dark' | 'light', ThemeColors> = {
+export const themeColors: Record<"dark" | "light", ThemeColors> = {
   dark: { ...sizeThemePresets.md.dark },
   light: { ...sizeThemePresets.md.light },
 };
@@ -89,63 +92,63 @@ export const themeColors: Record<'dark' | 'light', ThemeColors> = {
 const colorPalettes = {
   colorful: {
     border: [
-      { color: 'rgb(255, 50, 100)', pos: '33% -7.4%', size: '70px 40px' },
-      { color: 'rgb(40, 140, 255)', pos: '12% -5%', size: '60px 35px' },
-      { color: 'rgb(50, 200, 80)', pos: '2.1% 68.3%', size: '40px 70px' },
-      { color: 'rgb(30, 185, 170)', pos: '2.1% 68.3%', size: '20px 35px' },
-      { color: 'rgb(100, 70, 255)', pos: '74.4% 100%', size: '180px 32px' },
-      { color: 'rgb(40, 140, 255)', pos: '55% 100%', size: '85px 26px' },
-      { color: 'rgb(255, 120, 40)', pos: '93.9% 0%', size: '74px 32px' },
-      { color: 'rgb(240, 50, 180)', pos: '100% 27.1%', size: '26px 42px' },
-      { color: 'rgb(180, 40, 240)', pos: '100% 27.1%', size: '52px 48px' },
+      { color: "rgb(255, 50, 100)", pos: "33% -7.4%", size: "70px 40px" },
+      { color: "rgb(40, 140, 255)", pos: "12% -5%", size: "60px 35px" },
+      { color: "rgb(50, 200, 80)", pos: "2.1% 68.3%", size: "40px 70px" },
+      { color: "rgb(30, 185, 170)", pos: "2.1% 68.3%", size: "20px 35px" },
+      { color: "rgb(100, 70, 255)", pos: "74.4% 100%", size: "180px 32px" },
+      { color: "rgb(40, 140, 255)", pos: "55% 100%", size: "85px 26px" },
+      { color: "rgb(255, 120, 40)", pos: "93.9% 0%", size: "74px 32px" },
+      { color: "rgb(240, 50, 180)", pos: "100% 27.1%", size: "26px 42px" },
+      { color: "rgb(180, 40, 240)", pos: "100% 27.1%", size: "52px 48px" },
     ],
-    spike: { primary: 'rgb(255, 60, 80)', secondary: 'rgba(40, 190, 180, 0.98)' },
-    spikeLt: { primary: 'rgb(200, 30, 60)', secondary: 'rgb(20, 150, 140)' },
+    spike: { primary: "rgb(255, 60, 80)", secondary: "rgba(40, 190, 180, 0.98)" },
+    spikeLt: { primary: "rgb(200, 30, 60)", secondary: "rgb(20, 150, 140)" },
   },
   mono: {
     border: [
-      { color: 'rgb(180, 180, 180)', pos: '33% -7.4%', size: '70px 40px' },
-      { color: 'rgb(140, 140, 140)', pos: '12% -5%', size: '60px 35px' },
-      { color: 'rgb(160, 160, 160)', pos: '2.1% 68.3%', size: '40px 70px' },
-      { color: 'rgb(130, 130, 130)', pos: '2.1% 68.3%', size: '20px 35px' },
-      { color: 'rgb(170, 170, 170)', pos: '74.4% 100%', size: '180px 32px' },
-      { color: 'rgb(150, 150, 150)', pos: '55% 100%', size: '85px 26px' },
-      { color: 'rgb(190, 190, 190)', pos: '93.9% 0%', size: '74px 32px' },
-      { color: 'rgb(145, 145, 145)', pos: '100% 27.1%', size: '26px 42px' },
-      { color: 'rgb(165, 165, 165)', pos: '100% 27.1%', size: '52px 48px' },
+      { color: "rgb(180, 180, 180)", pos: "33% -7.4%", size: "70px 40px" },
+      { color: "rgb(140, 140, 140)", pos: "12% -5%", size: "60px 35px" },
+      { color: "rgb(160, 160, 160)", pos: "2.1% 68.3%", size: "40px 70px" },
+      { color: "rgb(130, 130, 130)", pos: "2.1% 68.3%", size: "20px 35px" },
+      { color: "rgb(170, 170, 170)", pos: "74.4% 100%", size: "180px 32px" },
+      { color: "rgb(150, 150, 150)", pos: "55% 100%", size: "85px 26px" },
+      { color: "rgb(190, 190, 190)", pos: "93.9% 0%", size: "74px 32px" },
+      { color: "rgb(145, 145, 145)", pos: "100% 27.1%", size: "26px 42px" },
+      { color: "rgb(165, 165, 165)", pos: "100% 27.1%", size: "52px 48px" },
     ],
-    spike: { primary: 'rgb(200, 200, 200)', secondary: 'rgb(170, 170, 170)' },
-    spikeLt: { primary: 'rgb(80, 80, 80)', secondary: 'rgb(120, 120, 120)' },
+    spike: { primary: "rgb(200, 200, 200)", secondary: "rgb(170, 170, 170)" },
+    spikeLt: { primary: "rgb(80, 80, 80)", secondary: "rgb(120, 120, 120)" },
   },
   ocean: {
     border: [
-      { color: 'rgb(100, 80, 220)', pos: '33% -7.4%', size: '70px 40px' },
-      { color: 'rgb(60, 120, 255)', pos: '12% -5%', size: '60px 35px' },
-      { color: 'rgb(80, 100, 200)', pos: '2.1% 68.3%', size: '40px 70px' },
-      { color: 'rgb(50, 140, 220)', pos: '2.1% 68.3%', size: '20px 35px' },
-      { color: 'rgb(120, 80, 255)', pos: '74.4% 100%', size: '180px 32px' },
-      { color: 'rgb(70, 130, 255)', pos: '55% 100%', size: '85px 26px' },
-      { color: 'rgb(140, 100, 240)', pos: '93.9% 0%', size: '74px 32px' },
-      { color: 'rgb(90, 110, 230)', pos: '100% 27.1%', size: '26px 42px' },
-      { color: 'rgb(130, 70, 255)', pos: '100% 27.1%', size: '52px 48px' },
+      { color: "rgb(100, 80, 220)", pos: "33% -7.4%", size: "70px 40px" },
+      { color: "rgb(60, 120, 255)", pos: "12% -5%", size: "60px 35px" },
+      { color: "rgb(80, 100, 200)", pos: "2.1% 68.3%", size: "40px 70px" },
+      { color: "rgb(50, 140, 220)", pos: "2.1% 68.3%", size: "20px 35px" },
+      { color: "rgb(120, 80, 255)", pos: "74.4% 100%", size: "180px 32px" },
+      { color: "rgb(70, 130, 255)", pos: "55% 100%", size: "85px 26px" },
+      { color: "rgb(140, 100, 240)", pos: "93.9% 0%", size: "74px 32px" },
+      { color: "rgb(90, 110, 230)", pos: "100% 27.1%", size: "26px 42px" },
+      { color: "rgb(130, 70, 255)", pos: "100% 27.1%", size: "52px 48px" },
     ],
-    spike: { primary: 'rgb(100, 120, 255)', secondary: 'rgba(130, 100, 220, 0.98)' },
-    spikeLt: { primary: 'rgb(60, 60, 180)', secondary: 'rgb(80, 100, 200)' },
+    spike: { primary: "rgb(100, 120, 255)", secondary: "rgba(130, 100, 220, 0.98)" },
+    spikeLt: { primary: "rgb(60, 60, 180)", secondary: "rgb(80, 100, 200)" },
   },
   sunset: {
     border: [
-      { color: 'rgb(255, 80, 50)', pos: '33% -7.4%', size: '70px 40px' },
-      { color: 'rgb(255, 160, 40)', pos: '12% -5%', size: '60px 35px' },
-      { color: 'rgb(255, 120, 60)', pos: '2.1% 68.3%', size: '40px 70px' },
-      { color: 'rgb(255, 200, 50)', pos: '2.1% 68.3%', size: '20px 35px' },
-      { color: 'rgb(255, 100, 80)', pos: '74.4% 100%', size: '180px 32px' },
-      { color: 'rgb(255, 180, 60)', pos: '55% 100%', size: '85px 26px' },
-      { color: 'rgb(255, 60, 60)', pos: '93.9% 0%', size: '74px 32px' },
-      { color: 'rgb(255, 140, 50)', pos: '100% 27.1%', size: '26px 42px' },
-      { color: 'rgb(255, 90, 70)', pos: '100% 27.1%', size: '52px 48px' },
+      { color: "rgb(255, 80, 50)", pos: "33% -7.4%", size: "70px 40px" },
+      { color: "rgb(255, 160, 40)", pos: "12% -5%", size: "60px 35px" },
+      { color: "rgb(255, 120, 60)", pos: "2.1% 68.3%", size: "40px 70px" },
+      { color: "rgb(255, 200, 50)", pos: "2.1% 68.3%", size: "20px 35px" },
+      { color: "rgb(255, 100, 80)", pos: "74.4% 100%", size: "180px 32px" },
+      { color: "rgb(255, 180, 60)", pos: "55% 100%", size: "85px 26px" },
+      { color: "rgb(255, 60, 60)", pos: "93.9% 0%", size: "74px 32px" },
+      { color: "rgb(255, 140, 50)", pos: "100% 27.1%", size: "26px 42px" },
+      { color: "rgb(255, 90, 70)", pos: "100% 27.1%", size: "52px 48px" },
     ],
-    spike: { primary: 'rgb(255, 140, 80)', secondary: 'rgba(255, 100, 60, 0.98)' },
-    spikeLt: { primary: 'rgb(200, 80, 40)', secondary: 'rgb(220, 120, 30)' },
+    spike: { primary: "rgb(255, 140, 80)", secondary: "rgba(255, 100, 60, 0.98)" },
+    spikeLt: { primary: "rgb(200, 80, 40)", secondary: "rgb(220, 120, 30)" },
   },
 };
 
@@ -155,90 +158,90 @@ const colorPalettes = {
 const smallColorPalettes = {
   colorful: {
     border: [
-      { color: 'rgb(50, 200, 80)', pos: '2% 68%', size: '9px 18px' },
-      { color: 'rgb(30, 185, 170)', pos: '2% 68%', size: '4px 8px' },
-      { color: 'rgb(255, 120, 40)', pos: '72% -3%', size: '59px 9px' },
-      { color: 'rgb(100, 70, 255)', pos: '74% 100%', size: '42px 7px' },
-      { color: 'rgb(240, 50, 180)', pos: '100% 27%', size: '10px 17px' },
-      { color: 'rgb(180, 40, 240)', pos: '100% 27%', size: '10px 18px' },
-      { color: 'rgb(40, 140, 255)', pos: '100% 27%', size: '5px 10px' },
-      { color: 'rgb(255, 50, 100)', pos: '100% 27%', size: '11px 12px' },
+      { color: "rgb(50, 200, 80)", pos: "2% 68%", size: "9px 18px" },
+      { color: "rgb(30, 185, 170)", pos: "2% 68%", size: "4px 8px" },
+      { color: "rgb(255, 120, 40)", pos: "72% -3%", size: "59px 9px" },
+      { color: "rgb(100, 70, 255)", pos: "74% 100%", size: "42px 7px" },
+      { color: "rgb(240, 50, 180)", pos: "100% 27%", size: "10px 17px" },
+      { color: "rgb(180, 40, 240)", pos: "100% 27%", size: "10px 18px" },
+      { color: "rgb(40, 140, 255)", pos: "100% 27%", size: "5px 10px" },
+      { color: "rgb(255, 50, 100)", pos: "100% 27%", size: "11px 12px" },
     ],
     inner: [
-      { color: 'rgba(50, 200, 80, 0.5)', pos: '2% 68%', size: '9px 18px' },
-      { color: 'rgba(30, 185, 170, 0.45)', pos: '2% 68%', size: '4px 8px' },
-      { color: 'rgba(255, 120, 40, 0.35)', pos: '72% -3%', size: '59px 9px' },
-      { color: 'rgba(100, 70, 255, 0.35)', pos: '74% 100%', size: '42px 7px' },
-      { color: 'rgba(240, 50, 180, 0.3)', pos: '100% 27%', size: '10px 17px' },
-      { color: 'rgba(180, 40, 240, 0.4)', pos: '100% 27%', size: '10px 18px' },
-      { color: 'rgba(40, 140, 255, 0.3)', pos: '100% 27%', size: '5px 10px' },
-      { color: 'rgba(255, 50, 100, 0.3)', pos: '100% 27%', size: '11px 12px' },
+      { color: "rgba(50, 200, 80, 0.5)", pos: "2% 68%", size: "9px 18px" },
+      { color: "rgba(30, 185, 170, 0.45)", pos: "2% 68%", size: "4px 8px" },
+      { color: "rgba(255, 120, 40, 0.35)", pos: "72% -3%", size: "59px 9px" },
+      { color: "rgba(100, 70, 255, 0.35)", pos: "74% 100%", size: "42px 7px" },
+      { color: "rgba(240, 50, 180, 0.3)", pos: "100% 27%", size: "10px 17px" },
+      { color: "rgba(180, 40, 240, 0.4)", pos: "100% 27%", size: "10px 18px" },
+      { color: "rgba(40, 140, 255, 0.3)", pos: "100% 27%", size: "5px 10px" },
+      { color: "rgba(255, 50, 100, 0.3)", pos: "100% 27%", size: "11px 12px" },
     ],
   },
   mono: {
     border: [
-      { color: 'rgb(160, 160, 160)', pos: '2% 68%', size: '9px 18px' },
-      { color: 'rgb(140, 140, 140)', pos: '2% 68%', size: '4px 8px' },
-      { color: 'rgb(180, 180, 180)', pos: '72% -3%', size: '59px 9px' },
-      { color: 'rgb(150, 150, 150)', pos: '74% 100%', size: '42px 7px' },
-      { color: 'rgb(170, 170, 170)', pos: '100% 27%', size: '10px 17px' },
-      { color: 'rgb(155, 155, 155)', pos: '100% 27%', size: '10px 18px' },
-      { color: 'rgb(145, 145, 145)', pos: '100% 27%', size: '5px 10px' },
-      { color: 'rgb(165, 165, 165)', pos: '100% 27%', size: '11px 12px' },
+      { color: "rgb(160, 160, 160)", pos: "2% 68%", size: "9px 18px" },
+      { color: "rgb(140, 140, 140)", pos: "2% 68%", size: "4px 8px" },
+      { color: "rgb(180, 180, 180)", pos: "72% -3%", size: "59px 9px" },
+      { color: "rgb(150, 150, 150)", pos: "74% 100%", size: "42px 7px" },
+      { color: "rgb(170, 170, 170)", pos: "100% 27%", size: "10px 17px" },
+      { color: "rgb(155, 155, 155)", pos: "100% 27%", size: "10px 18px" },
+      { color: "rgb(145, 145, 145)", pos: "100% 27%", size: "5px 10px" },
+      { color: "rgb(165, 165, 165)", pos: "100% 27%", size: "11px 12px" },
     ],
     inner: [
-      { color: 'rgba(160, 160, 160, 0.25)', pos: '2% 68%', size: '9px 18px' },
-      { color: 'rgba(140, 140, 140, 0.22)', pos: '2% 68%', size: '4px 8px' },
-      { color: 'rgba(180, 180, 180, 0.17)', pos: '72% -3%', size: '59px 9px' },
-      { color: 'rgba(150, 150, 150, 0.17)', pos: '74% 100%', size: '42px 7px' },
-      { color: 'rgba(170, 170, 170, 0.15)', pos: '100% 27%', size: '10px 17px' },
-      { color: 'rgba(155, 155, 155, 0.20)', pos: '100% 27%', size: '10px 18px' },
-      { color: 'rgba(145, 145, 145, 0.15)', pos: '100% 27%', size: '5px 10px' },
-      { color: 'rgba(165, 165, 165, 0.15)', pos: '100% 27%', size: '11px 12px' },
+      { color: "rgba(160, 160, 160, 0.25)", pos: "2% 68%", size: "9px 18px" },
+      { color: "rgba(140, 140, 140, 0.22)", pos: "2% 68%", size: "4px 8px" },
+      { color: "rgba(180, 180, 180, 0.17)", pos: "72% -3%", size: "59px 9px" },
+      { color: "rgba(150, 150, 150, 0.17)", pos: "74% 100%", size: "42px 7px" },
+      { color: "rgba(170, 170, 170, 0.15)", pos: "100% 27%", size: "10px 17px" },
+      { color: "rgba(155, 155, 155, 0.20)", pos: "100% 27%", size: "10px 18px" },
+      { color: "rgba(145, 145, 145, 0.15)", pos: "100% 27%", size: "5px 10px" },
+      { color: "rgba(165, 165, 165, 0.15)", pos: "100% 27%", size: "11px 12px" },
     ],
   },
   ocean: {
     border: [
-      { color: 'rgb(60, 140, 200)', pos: '2% 68%', size: '9px 18px' },
-      { color: 'rgb(50, 120, 180)', pos: '2% 68%', size: '4px 8px' },
-      { color: 'rgb(100, 80, 220)', pos: '72% -3%', size: '59px 9px' },
-      { color: 'rgb(80, 100, 255)', pos: '74% 100%', size: '42px 7px' },
-      { color: 'rgb(120, 70, 240)', pos: '100% 27%', size: '10px 17px' },
-      { color: 'rgb(90, 80, 220)', pos: '100% 27%', size: '10px 18px' },
-      { color: 'rgb(70, 110, 255)', pos: '100% 27%', size: '5px 10px' },
-      { color: 'rgb(110, 90, 230)', pos: '100% 27%', size: '11px 12px' },
+      { color: "rgb(60, 140, 200)", pos: "2% 68%", size: "9px 18px" },
+      { color: "rgb(50, 120, 180)", pos: "2% 68%", size: "4px 8px" },
+      { color: "rgb(100, 80, 220)", pos: "72% -3%", size: "59px 9px" },
+      { color: "rgb(80, 100, 255)", pos: "74% 100%", size: "42px 7px" },
+      { color: "rgb(120, 70, 240)", pos: "100% 27%", size: "10px 17px" },
+      { color: "rgb(90, 80, 220)", pos: "100% 27%", size: "10px 18px" },
+      { color: "rgb(70, 110, 255)", pos: "100% 27%", size: "5px 10px" },
+      { color: "rgb(110, 90, 230)", pos: "100% 27%", size: "11px 12px" },
     ],
     inner: [
-      { color: 'rgba(60, 140, 200, 0.5)', pos: '2% 68%', size: '9px 18px' },
-      { color: 'rgba(50, 120, 180, 0.45)', pos: '2% 68%', size: '4px 8px' },
-      { color: 'rgba(100, 80, 220, 0.35)', pos: '72% -3%', size: '59px 9px' },
-      { color: 'rgba(80, 100, 255, 0.35)', pos: '74% 100%', size: '42px 7px' },
-      { color: 'rgba(120, 70, 240, 0.3)', pos: '100% 27%', size: '10px 17px' },
-      { color: 'rgba(90, 80, 220, 0.4)', pos: '100% 27%', size: '10px 18px' },
-      { color: 'rgba(70, 110, 255, 0.3)', pos: '100% 27%', size: '5px 10px' },
-      { color: 'rgba(110, 90, 230, 0.3)', pos: '100% 27%', size: '11px 12px' },
+      { color: "rgba(60, 140, 200, 0.5)", pos: "2% 68%", size: "9px 18px" },
+      { color: "rgba(50, 120, 180, 0.45)", pos: "2% 68%", size: "4px 8px" },
+      { color: "rgba(100, 80, 220, 0.35)", pos: "72% -3%", size: "59px 9px" },
+      { color: "rgba(80, 100, 255, 0.35)", pos: "74% 100%", size: "42px 7px" },
+      { color: "rgba(120, 70, 240, 0.3)", pos: "100% 27%", size: "10px 17px" },
+      { color: "rgba(90, 80, 220, 0.4)", pos: "100% 27%", size: "10px 18px" },
+      { color: "rgba(70, 110, 255, 0.3)", pos: "100% 27%", size: "5px 10px" },
+      { color: "rgba(110, 90, 230, 0.3)", pos: "100% 27%", size: "11px 12px" },
     ],
   },
   sunset: {
     border: [
-      { color: 'rgb(255, 180, 50)', pos: '2% 68%', size: '9px 18px' },
-      { color: 'rgb(255, 150, 40)', pos: '2% 68%', size: '4px 8px' },
-      { color: 'rgb(255, 80, 60)', pos: '72% -3%', size: '59px 9px' },
-      { color: 'rgb(255, 100, 80)', pos: '74% 100%', size: '42px 7px' },
-      { color: 'rgb(255, 60, 80)', pos: '100% 27%', size: '10px 17px' },
-      { color: 'rgb(255, 120, 60)', pos: '100% 27%', size: '10px 18px' },
-      { color: 'rgb(255, 200, 50)', pos: '100% 27%', size: '5px 10px' },
-      { color: 'rgb(255, 90, 70)', pos: '100% 27%', size: '11px 12px' },
+      { color: "rgb(255, 180, 50)", pos: "2% 68%", size: "9px 18px" },
+      { color: "rgb(255, 150, 40)", pos: "2% 68%", size: "4px 8px" },
+      { color: "rgb(255, 80, 60)", pos: "72% -3%", size: "59px 9px" },
+      { color: "rgb(255, 100, 80)", pos: "74% 100%", size: "42px 7px" },
+      { color: "rgb(255, 60, 80)", pos: "100% 27%", size: "10px 17px" },
+      { color: "rgb(255, 120, 60)", pos: "100% 27%", size: "10px 18px" },
+      { color: "rgb(255, 200, 50)", pos: "100% 27%", size: "5px 10px" },
+      { color: "rgb(255, 90, 70)", pos: "100% 27%", size: "11px 12px" },
     ],
     inner: [
-      { color: 'rgba(255, 180, 50, 0.5)', pos: '2% 68%', size: '9px 18px' },
-      { color: 'rgba(255, 150, 40, 0.45)', pos: '2% 68%', size: '4px 8px' },
-      { color: 'rgba(255, 80, 60, 0.35)', pos: '72% -3%', size: '59px 9px' },
-      { color: 'rgba(255, 100, 80, 0.35)', pos: '74% 100%', size: '42px 7px' },
-      { color: 'rgba(255, 60, 80, 0.3)', pos: '100% 27%', size: '10px 17px' },
-      { color: 'rgba(255, 120, 60, 0.4)', pos: '100% 27%', size: '10px 18px' },
-      { color: 'rgba(255, 200, 50, 0.3)', pos: '100% 27%', size: '5px 10px' },
-      { color: 'rgba(255, 90, 70, 0.3)', pos: '100% 27%', size: '11px 12px' },
+      { color: "rgba(255, 180, 50, 0.5)", pos: "2% 68%", size: "9px 18px" },
+      { color: "rgba(255, 150, 40, 0.45)", pos: "2% 68%", size: "4px 8px" },
+      { color: "rgba(255, 80, 60, 0.35)", pos: "72% -3%", size: "59px 9px" },
+      { color: "rgba(255, 100, 80, 0.35)", pos: "74% 100%", size: "42px 7px" },
+      { color: "rgba(255, 60, 80, 0.3)", pos: "100% 27%", size: "10px 17px" },
+      { color: "rgba(255, 120, 60, 0.4)", pos: "100% 27%", size: "10px 18px" },
+      { color: "rgba(255, 200, 50, 0.3)", pos: "100% 27%", size: "5px 10px" },
+      { color: "rgba(255, 90, 70, 0.3)", pos: "100% 27%", size: "11px 12px" },
     ],
   },
 };
@@ -246,38 +249,41 @@ const smallColorPalettes = {
 function getSmallColorGradients(colorVariant: BorderBeamColorVariant): string {
   const palette = smallColorPalettes[colorVariant];
   return palette.border
-    .map(c => `radial-gradient(ellipse ${c.size} at ${c.pos}, ${c.color}, transparent)`)
-    .join(',\n    ');
+    .map((c) => `radial-gradient(ellipse ${c.size} at ${c.pos}, ${c.color}, transparent)`)
+    .join(",\n    ");
 }
 
 function getSmallInnerGradients(colorVariant: BorderBeamColorVariant): string {
   const palette = smallColorPalettes[colorVariant];
   return palette.inner
-    .map(c => `radial-gradient(ellipse ${c.size} at ${c.pos}, ${c.color}, transparent)`)
-    .join(',\n    ');
+    .map((c) => `radial-gradient(ellipse ${c.size} at ${c.pos}, ${c.color}, transparent)`)
+    .join(",\n    ");
 }
 
 function getColorGradients(colorVariant: BorderBeamColorVariant): string {
   const palette = colorPalettes[colorVariant];
   return palette.border
-    .map(c => `radial-gradient(ellipse ${c.size} at ${c.pos}, ${c.color}, transparent)`)
-    .join(',\n    ');
+    .map((c) => `radial-gradient(ellipse ${c.size} at ${c.pos}, ${c.color}, transparent)`)
+    .join(",\n    ");
 }
 
 function getInnerGradients(colorVariant: BorderBeamColorVariant): string {
   const palette = colorPalettes[colorVariant];
   // Mono variant gets 50% lower opacity
-  const baseOpacity = colorVariant === 'mono' ? 0.225 : 0.45;
+  const baseOpacity = colorVariant === "mono" ? 0.225 : 0.45;
   return palette.border
-    .map(c => {
-      const rgba = c.color.replace('rgb(', 'rgba(').replace(')', `, ${baseOpacity})`);
-      const smallerSize = c.size.split(' ').map(s => {
-        const val = parseInt(s);
-        return `${Math.round(val * 0.9)}px`;
-      }).join(' ');
+    .map((c) => {
+      const rgba = c.color.replace("rgb(", "rgba(").replace(")", `, ${baseOpacity})`);
+      const smallerSize = c.size
+        .split(" ")
+        .map((s) => {
+          const val = parseInt(s);
+          return `${Math.round(val * 0.9)}px`;
+        })
+        .join(" ");
       return `radial-gradient(ellipse ${smallerSize} at ${c.pos}, ${rgba}, transparent)`;
     })
-    .join(',\n    ');
+    .join(",\n    ");
 }
 
 function getSpikeColors(colorVariant: BorderBeamColorVariant, isDark: boolean) {
@@ -288,257 +294,266 @@ function getSpikeColors(colorVariant: BorderBeamColorVariant, isDark: boolean) {
 const lineColorPalettes = {
   colorful: {
     dark: [
-      { color: 'rgb(255, 50, 100)', sizeW: 36, sizeH: 36, offsetX: 0, offsetY: 2 },
-      { color: 'rgb(40, 180, 220)', sizeW: 30, sizeH: 32, offsetX: 39, offsetY: 0 },
-      { color: 'rgb(50, 200, 80)', sizeW: 33, sizeH: 28, offsetX: -36, offsetY: 2 },
-      { color: 'rgb(180, 40, 240)', sizeW: 29, sizeH: 34, offsetX: -54, offsetY: 0 },
-      { color: 'rgb(255, 160, 30)', sizeW: 27, sizeH: 30, offsetX: 51, offsetY: -1 },
-      { color: 'rgb(100, 70, 255)', sizeW: 36, sizeH: 24, offsetX: 21, offsetY: 1 },
-      { color: 'rgb(40, 140, 255)', sizeW: 30, sizeH: 22, offsetX: -21, offsetY: 0 },
-      { color: 'rgb(240, 50, 180)', sizeW: 25, sizeH: 28, offsetX: 66, offsetY: 1 },
-      { color: 'rgb(30, 185, 170)', sizeW: 23, sizeH: 30, offsetX: -66, offsetY: -1 },
+      { color: "rgb(255, 50, 100)", sizeW: 36, sizeH: 36, offsetX: 0, offsetY: 2 },
+      { color: "rgb(40, 180, 220)", sizeW: 30, sizeH: 32, offsetX: 39, offsetY: 0 },
+      { color: "rgb(50, 200, 80)", sizeW: 33, sizeH: 28, offsetX: -36, offsetY: 2 },
+      { color: "rgb(180, 40, 240)", sizeW: 29, sizeH: 34, offsetX: -54, offsetY: 0 },
+      { color: "rgb(255, 160, 30)", sizeW: 27, sizeH: 30, offsetX: 51, offsetY: -1 },
+      { color: "rgb(100, 70, 255)", sizeW: 36, sizeH: 24, offsetX: 21, offsetY: 1 },
+      { color: "rgb(40, 140, 255)", sizeW: 30, sizeH: 22, offsetX: -21, offsetY: 0 },
+      { color: "rgb(240, 50, 180)", sizeW: 25, sizeH: 28, offsetX: 66, offsetY: 1 },
+      { color: "rgb(30, 185, 170)", sizeW: 23, sizeH: 30, offsetX: -66, offsetY: -1 },
     ],
     light: [
-      { color: 'rgb(255, 50, 100)', sizeW: 45, sizeH: 36, offsetX: 0, offsetY: 2 },
-      { color: 'rgb(40, 140, 255)', sizeW: 35, sizeH: 32, offsetX: 65, offsetY: 0 },
-      { color: 'rgb(50, 200, 80)', sizeW: 40, sizeH: 28, offsetX: -60, offsetY: 2 },
-      { color: 'rgb(180, 40, 240)', sizeW: 35, sizeH: 34, offsetX: -90, offsetY: 0 },
-      { color: 'rgb(30, 185, 170)', sizeW: 38, sizeH: 30, offsetX: 85, offsetY: -1 },
-      { color: 'rgb(100, 70, 255)', sizeW: 50, sizeH: 24, offsetX: 35, offsetY: 1 },
-      { color: 'rgb(40, 140, 255)', sizeW: 40, sizeH: 22, offsetX: -35, offsetY: 0 },
-      { color: 'rgb(255, 120, 40)', sizeW: 35, sizeH: 28, offsetX: 110, offsetY: 1 },
-      { color: 'rgb(240, 50, 180)', sizeW: 30, sizeH: 30, offsetX: -110, offsetY: -1 },
+      { color: "rgb(255, 50, 100)", sizeW: 45, sizeH: 36, offsetX: 0, offsetY: 2 },
+      { color: "rgb(40, 140, 255)", sizeW: 35, sizeH: 32, offsetX: 65, offsetY: 0 },
+      { color: "rgb(50, 200, 80)", sizeW: 40, sizeH: 28, offsetX: -60, offsetY: 2 },
+      { color: "rgb(180, 40, 240)", sizeW: 35, sizeH: 34, offsetX: -90, offsetY: 0 },
+      { color: "rgb(30, 185, 170)", sizeW: 38, sizeH: 30, offsetX: 85, offsetY: -1 },
+      { color: "rgb(100, 70, 255)", sizeW: 50, sizeH: 24, offsetX: 35, offsetY: 1 },
+      { color: "rgb(40, 140, 255)", sizeW: 40, sizeH: 22, offsetX: -35, offsetY: 0 },
+      { color: "rgb(255, 120, 40)", sizeW: 35, sizeH: 28, offsetX: 110, offsetY: 1 },
+      { color: "rgb(240, 50, 180)", sizeW: 30, sizeH: 30, offsetX: -110, offsetY: -1 },
     ],
   },
   mono: {
     dark: [
-      { color: 'rgb(200, 200, 200)', sizeW: 36, sizeH: 36, offsetX: 0, offsetY: 2 },
-      { color: 'rgb(170, 170, 170)', sizeW: 30, sizeH: 32, offsetX: 39, offsetY: 0 },
-      { color: 'rgb(155, 155, 155)', sizeW: 33, sizeH: 28, offsetX: -36, offsetY: 2 },
-      { color: 'rgb(185, 185, 185)', sizeW: 29, sizeH: 34, offsetX: -54, offsetY: 0 },
-      { color: 'rgb(165, 165, 165)', sizeW: 27, sizeH: 30, offsetX: 51, offsetY: -1 },
-      { color: 'rgb(180, 180, 180)', sizeW: 36, sizeH: 24, offsetX: 21, offsetY: 1 },
-      { color: 'rgb(160, 160, 160)', sizeW: 30, sizeH: 22, offsetX: -21, offsetY: 0 },
-      { color: 'rgb(175, 175, 175)', sizeW: 25, sizeH: 28, offsetX: 66, offsetY: 1 },
-      { color: 'rgb(190, 190, 190)', sizeW: 23, sizeH: 30, offsetX: -66, offsetY: -1 },
+      { color: "rgb(200, 200, 200)", sizeW: 36, sizeH: 36, offsetX: 0, offsetY: 2 },
+      { color: "rgb(170, 170, 170)", sizeW: 30, sizeH: 32, offsetX: 39, offsetY: 0 },
+      { color: "rgb(155, 155, 155)", sizeW: 33, sizeH: 28, offsetX: -36, offsetY: 2 },
+      { color: "rgb(185, 185, 185)", sizeW: 29, sizeH: 34, offsetX: -54, offsetY: 0 },
+      { color: "rgb(165, 165, 165)", sizeW: 27, sizeH: 30, offsetX: 51, offsetY: -1 },
+      { color: "rgb(180, 180, 180)", sizeW: 36, sizeH: 24, offsetX: 21, offsetY: 1 },
+      { color: "rgb(160, 160, 160)", sizeW: 30, sizeH: 22, offsetX: -21, offsetY: 0 },
+      { color: "rgb(175, 175, 175)", sizeW: 25, sizeH: 28, offsetX: 66, offsetY: 1 },
+      { color: "rgb(190, 190, 190)", sizeW: 23, sizeH: 30, offsetX: -66, offsetY: -1 },
     ],
     light: [
-      { color: 'rgb(100, 100, 100)', sizeW: 45, sizeH: 36, offsetX: 0, offsetY: 2 },
-      { color: 'rgb(80, 80, 80)', sizeW: 35, sizeH: 32, offsetX: 65, offsetY: 0 },
-      { color: 'rgb(90, 90, 90)', sizeW: 40, sizeH: 28, offsetX: -60, offsetY: 2 },
-      { color: 'rgb(70, 70, 70)', sizeW: 35, sizeH: 34, offsetX: -90, offsetY: 0 },
-      { color: 'rgb(85, 85, 85)', sizeW: 38, sizeH: 30, offsetX: 85, offsetY: -1 },
-      { color: 'rgb(95, 95, 95)', sizeW: 50, sizeH: 24, offsetX: 35, offsetY: 1 },
-      { color: 'rgb(75, 75, 75)', sizeW: 40, sizeH: 22, offsetX: -35, offsetY: 0 },
-      { color: 'rgb(105, 105, 105)', sizeW: 35, sizeH: 28, offsetX: 110, offsetY: 1 },
-      { color: 'rgb(65, 65, 65)', sizeW: 30, sizeH: 30, offsetX: -110, offsetY: -1 },
+      { color: "rgb(100, 100, 100)", sizeW: 45, sizeH: 36, offsetX: 0, offsetY: 2 },
+      { color: "rgb(80, 80, 80)", sizeW: 35, sizeH: 32, offsetX: 65, offsetY: 0 },
+      { color: "rgb(90, 90, 90)", sizeW: 40, sizeH: 28, offsetX: -60, offsetY: 2 },
+      { color: "rgb(70, 70, 70)", sizeW: 35, sizeH: 34, offsetX: -90, offsetY: 0 },
+      { color: "rgb(85, 85, 85)", sizeW: 38, sizeH: 30, offsetX: 85, offsetY: -1 },
+      { color: "rgb(95, 95, 95)", sizeW: 50, sizeH: 24, offsetX: 35, offsetY: 1 },
+      { color: "rgb(75, 75, 75)", sizeW: 40, sizeH: 22, offsetX: -35, offsetY: 0 },
+      { color: "rgb(105, 105, 105)", sizeW: 35, sizeH: 28, offsetX: 110, offsetY: 1 },
+      { color: "rgb(65, 65, 65)", sizeW: 30, sizeH: 30, offsetX: -110, offsetY: -1 },
     ],
   },
   ocean: {
     dark: [
-      { color: 'rgb(100, 80, 220)', sizeW: 36, sizeH: 36, offsetX: 0, offsetY: 2 },
-      { color: 'rgb(60, 120, 255)', sizeW: 30, sizeH: 32, offsetX: 39, offsetY: 0 },
-      { color: 'rgb(80, 100, 200)', sizeW: 33, sizeH: 28, offsetX: -36, offsetY: 2 },
-      { color: 'rgb(130, 70, 255)', sizeW: 29, sizeH: 34, offsetX: -54, offsetY: 0 },
-      { color: 'rgb(70, 130, 255)', sizeW: 27, sizeH: 30, offsetX: 51, offsetY: -1 },
-      { color: 'rgb(120, 80, 255)', sizeW: 36, sizeH: 24, offsetX: 21, offsetY: 1 },
-      { color: 'rgb(90, 110, 230)', sizeW: 30, sizeH: 22, offsetX: -21, offsetY: 0 },
-      { color: 'rgb(110, 90, 240)', sizeW: 25, sizeH: 28, offsetX: 66, offsetY: 1 },
-      { color: 'rgb(140, 100, 255)', sizeW: 23, sizeH: 30, offsetX: -66, offsetY: -1 },
+      { color: "rgb(100, 80, 220)", sizeW: 36, sizeH: 36, offsetX: 0, offsetY: 2 },
+      { color: "rgb(60, 120, 255)", sizeW: 30, sizeH: 32, offsetX: 39, offsetY: 0 },
+      { color: "rgb(80, 100, 200)", sizeW: 33, sizeH: 28, offsetX: -36, offsetY: 2 },
+      { color: "rgb(130, 70, 255)", sizeW: 29, sizeH: 34, offsetX: -54, offsetY: 0 },
+      { color: "rgb(70, 130, 255)", sizeW: 27, sizeH: 30, offsetX: 51, offsetY: -1 },
+      { color: "rgb(120, 80, 255)", sizeW: 36, sizeH: 24, offsetX: 21, offsetY: 1 },
+      { color: "rgb(90, 110, 230)", sizeW: 30, sizeH: 22, offsetX: -21, offsetY: 0 },
+      { color: "rgb(110, 90, 240)", sizeW: 25, sizeH: 28, offsetX: 66, offsetY: 1 },
+      { color: "rgb(140, 100, 255)", sizeW: 23, sizeH: 30, offsetX: -66, offsetY: -1 },
     ],
     light: [
-      { color: 'rgb(80, 60, 200)', sizeW: 45, sizeH: 36, offsetX: 0, offsetY: 2 },
-      { color: 'rgb(50, 100, 220)', sizeW: 35, sizeH: 32, offsetX: 65, offsetY: 0 },
-      { color: 'rgb(70, 90, 190)', sizeW: 40, sizeH: 28, offsetX: -60, offsetY: 2 },
-      { color: 'rgb(110, 60, 220)', sizeW: 35, sizeH: 34, offsetX: -90, offsetY: 0 },
-      { color: 'rgb(60, 110, 230)', sizeW: 38, sizeH: 30, offsetX: 85, offsetY: -1 },
-      { color: 'rgb(100, 70, 240)', sizeW: 50, sizeH: 24, offsetX: 35, offsetY: 1 },
-      { color: 'rgb(80, 100, 210)', sizeW: 40, sizeH: 22, offsetX: -35, offsetY: 0 },
-      { color: 'rgb(90, 80, 225)', sizeW: 35, sizeH: 28, offsetX: 110, offsetY: 1 },
-      { color: 'rgb(120, 90, 245)', sizeW: 30, sizeH: 30, offsetX: -110, offsetY: -1 },
+      { color: "rgb(80, 60, 200)", sizeW: 45, sizeH: 36, offsetX: 0, offsetY: 2 },
+      { color: "rgb(50, 100, 220)", sizeW: 35, sizeH: 32, offsetX: 65, offsetY: 0 },
+      { color: "rgb(70, 90, 190)", sizeW: 40, sizeH: 28, offsetX: -60, offsetY: 2 },
+      { color: "rgb(110, 60, 220)", sizeW: 35, sizeH: 34, offsetX: -90, offsetY: 0 },
+      { color: "rgb(60, 110, 230)", sizeW: 38, sizeH: 30, offsetX: 85, offsetY: -1 },
+      { color: "rgb(100, 70, 240)", sizeW: 50, sizeH: 24, offsetX: 35, offsetY: 1 },
+      { color: "rgb(80, 100, 210)", sizeW: 40, sizeH: 22, offsetX: -35, offsetY: 0 },
+      { color: "rgb(90, 80, 225)", sizeW: 35, sizeH: 28, offsetX: 110, offsetY: 1 },
+      { color: "rgb(120, 90, 245)", sizeW: 30, sizeH: 30, offsetX: -110, offsetY: -1 },
     ],
   },
   sunset: {
     dark: [
-      { color: 'rgb(255, 100, 60)', sizeW: 36, sizeH: 36, offsetX: 0, offsetY: 2 },
-      { color: 'rgb(255, 180, 50)', sizeW: 30, sizeH: 32, offsetX: 39, offsetY: 0 },
-      { color: 'rgb(255, 140, 70)', sizeW: 33, sizeH: 28, offsetX: -36, offsetY: 2 },
-      { color: 'rgb(255, 80, 80)', sizeW: 29, sizeH: 34, offsetX: -54, offsetY: 0 },
-      { color: 'rgb(255, 200, 60)', sizeW: 27, sizeH: 30, offsetX: 51, offsetY: -1 },
-      { color: 'rgb(255, 120, 50)', sizeW: 36, sizeH: 24, offsetX: 21, offsetY: 1 },
-      { color: 'rgb(255, 160, 80)', sizeW: 30, sizeH: 22, offsetX: -21, offsetY: 0 },
-      { color: 'rgb(255, 90, 60)', sizeW: 25, sizeH: 28, offsetX: 66, offsetY: 1 },
-      { color: 'rgb(255, 70, 70)', sizeW: 23, sizeH: 30, offsetX: -66, offsetY: -1 },
+      { color: "rgb(255, 100, 60)", sizeW: 36, sizeH: 36, offsetX: 0, offsetY: 2 },
+      { color: "rgb(255, 180, 50)", sizeW: 30, sizeH: 32, offsetX: 39, offsetY: 0 },
+      { color: "rgb(255, 140, 70)", sizeW: 33, sizeH: 28, offsetX: -36, offsetY: 2 },
+      { color: "rgb(255, 80, 80)", sizeW: 29, sizeH: 34, offsetX: -54, offsetY: 0 },
+      { color: "rgb(255, 200, 60)", sizeW: 27, sizeH: 30, offsetX: 51, offsetY: -1 },
+      { color: "rgb(255, 120, 50)", sizeW: 36, sizeH: 24, offsetX: 21, offsetY: 1 },
+      { color: "rgb(255, 160, 80)", sizeW: 30, sizeH: 22, offsetX: -21, offsetY: 0 },
+      { color: "rgb(255, 90, 60)", sizeW: 25, sizeH: 28, offsetX: 66, offsetY: 1 },
+      { color: "rgb(255, 70, 70)", sizeW: 23, sizeH: 30, offsetX: -66, offsetY: -1 },
     ],
     light: [
-      { color: 'rgb(220, 80, 40)', sizeW: 45, sizeH: 36, offsetX: 0, offsetY: 2 },
-      { color: 'rgb(230, 150, 30)', sizeW: 35, sizeH: 32, offsetX: 65, offsetY: 0 },
-      { color: 'rgb(210, 110, 50)', sizeW: 40, sizeH: 28, offsetX: -60, offsetY: 2 },
-      { color: 'rgb(200, 60, 60)', sizeW: 35, sizeH: 34, offsetX: -90, offsetY: 0 },
-      { color: 'rgb(220, 170, 40)', sizeW: 38, sizeH: 30, offsetX: 85, offsetY: -1 },
-      { color: 'rgb(210, 100, 30)', sizeW: 50, sizeH: 24, offsetX: 35, offsetY: 1 },
-      { color: 'rgb(230, 130, 60)', sizeW: 40, sizeH: 22, offsetX: -35, offsetY: 0 },
-      { color: 'rgb(190, 70, 50)', sizeW: 35, sizeH: 28, offsetX: 110, offsetY: 1 },
-      { color: 'rgb(180, 50, 50)', sizeW: 30, sizeH: 30, offsetX: -110, offsetY: -1 },
+      { color: "rgb(220, 80, 40)", sizeW: 45, sizeH: 36, offsetX: 0, offsetY: 2 },
+      { color: "rgb(230, 150, 30)", sizeW: 35, sizeH: 32, offsetX: 65, offsetY: 0 },
+      { color: "rgb(210, 110, 50)", sizeW: 40, sizeH: 28, offsetX: -60, offsetY: 2 },
+      { color: "rgb(200, 60, 60)", sizeW: 35, sizeH: 34, offsetX: -90, offsetY: 0 },
+      { color: "rgb(220, 170, 40)", sizeW: 38, sizeH: 30, offsetX: 85, offsetY: -1 },
+      { color: "rgb(210, 100, 30)", sizeW: 50, sizeH: 24, offsetX: 35, offsetY: 1 },
+      { color: "rgb(230, 130, 60)", sizeW: 40, sizeH: 22, offsetX: -35, offsetY: 0 },
+      { color: "rgb(190, 70, 50)", sizeW: 35, sizeH: 28, offsetX: 110, offsetY: 1 },
+      { color: "rgb(180, 50, 50)", sizeW: 30, sizeH: 30, offsetX: -110, offsetY: -1 },
     ],
   },
 };
 
-function getLineColorGradients(colorVariant: BorderBeamColorVariant, isDark: boolean, id: string): string {
-  const palette = lineColorPalettes[colorVariant][isDark ? 'dark' : 'light'];
+function getLineColorGradients(
+  colorVariant: BorderBeamColorVariant,
+  isDark: boolean,
+  id: string,
+): string {
+  const palette = lineColorPalettes[colorVariant][isDark ? "dark" : "light"];
   return palette
-    .map(c => {
-      const offsetXStr = c.offsetX === 0 ? '' : (c.offsetX > 0 ? ` + ${c.offsetX}px` : ` - ${Math.abs(c.offsetX)}px`);
-      const offsetYStr = c.offsetY === 0 ? '' : (c.offsetY > 0 ? ` + ${c.offsetY}px` : ` - ${Math.abs(c.offsetY)}px`);
+    .map((c) => {
+      const offsetXStr =
+        c.offsetX === 0 ? "" : c.offsetX > 0 ? ` + ${c.offsetX}px` : ` - ${Math.abs(c.offsetX)}px`;
+      const offsetYStr =
+        c.offsetY === 0 ? "" : c.offsetY > 0 ? ` + ${c.offsetY}px` : ` - ${Math.abs(c.offsetY)}px`;
       return `radial-gradient(ellipse calc(${c.sizeW}px * var(--beam-w-${id})) calc(${c.sizeH}px * var(--beam-h-${id})) at calc(var(--beam-x-${id}) * 100%${offsetXStr}) calc(100%${offsetYStr}), ${c.color}, transparent)`;
     })
-    .join(',\n       ');
+    .join(",\n       ");
 }
 
 // Inner gradient data matching v5.css exactly
 const lineInnerGradientData = {
   colorful: [
-    { color: 'rgba(255, 50, 100, 0.48)', sizeW: 33, sizeH: 30, offsetX: 0, offsetY: 0 },
-    { color: 'rgba(40, 180, 220, 0.42)', sizeW: 24, sizeH: 26, offsetX: 39, offsetY: -3 },
-    { color: 'rgba(50, 200, 80, 0.48)', sizeW: 27, sizeH: 24, offsetX: -36, offsetY: 0 },
-    { color: 'rgba(180, 40, 240, 0.42)', sizeW: 23, sizeH: 28, offsetX: -54, offsetY: -2 },
-    { color: 'rgba(255, 160, 30, 0.50)', sizeW: 24, sizeH: 24, offsetX: 51, offsetY: -1 },
-    { color: 'rgba(100, 70, 255, 0.45)', sizeW: 30, sizeH: 20, offsetX: 21, offsetY: 0 },
-    { color: 'rgba(40, 140, 255, 0.40)', sizeW: 25, sizeH: 18, offsetX: -21, offsetY: -2 },
-    { color: 'rgba(240, 50, 180, 0.45)', sizeW: 21, sizeH: 24, offsetX: 66, offsetY: 0 },
-    { color: 'rgba(30, 185, 170, 0.52)', sizeW: 18, sizeH: 26, offsetX: -66, offsetY: -1 },
+    { color: "rgba(255, 50, 100, 0.48)", sizeW: 33, sizeH: 30, offsetX: 0, offsetY: 0 },
+    { color: "rgba(40, 180, 220, 0.42)", sizeW: 24, sizeH: 26, offsetX: 39, offsetY: -3 },
+    { color: "rgba(50, 200, 80, 0.48)", sizeW: 27, sizeH: 24, offsetX: -36, offsetY: 0 },
+    { color: "rgba(180, 40, 240, 0.42)", sizeW: 23, sizeH: 28, offsetX: -54, offsetY: -2 },
+    { color: "rgba(255, 160, 30, 0.50)", sizeW: 24, sizeH: 24, offsetX: 51, offsetY: -1 },
+    { color: "rgba(100, 70, 255, 0.45)", sizeW: 30, sizeH: 20, offsetX: 21, offsetY: 0 },
+    { color: "rgba(40, 140, 255, 0.40)", sizeW: 25, sizeH: 18, offsetX: -21, offsetY: -2 },
+    { color: "rgba(240, 50, 180, 0.45)", sizeW: 21, sizeH: 24, offsetX: 66, offsetY: 0 },
+    { color: "rgba(30, 185, 170, 0.52)", sizeW: 18, sizeH: 26, offsetX: -66, offsetY: -1 },
   ],
   mono: [
-    { color: 'rgba(200, 200, 200, 0.48)', sizeW: 33, sizeH: 30, offsetX: 0, offsetY: 0 },
-    { color: 'rgba(170, 170, 170, 0.42)', sizeW: 24, sizeH: 26, offsetX: 39, offsetY: -3 },
-    { color: 'rgba(155, 155, 155, 0.48)', sizeW: 27, sizeH: 24, offsetX: -36, offsetY: 0 },
-    { color: 'rgba(185, 185, 185, 0.42)', sizeW: 23, sizeH: 28, offsetX: -54, offsetY: -2 },
-    { color: 'rgba(165, 165, 165, 0.50)', sizeW: 24, sizeH: 24, offsetX: 51, offsetY: -1 },
-    { color: 'rgba(180, 180, 180, 0.45)', sizeW: 30, sizeH: 20, offsetX: 21, offsetY: 0 },
-    { color: 'rgba(160, 160, 160, 0.40)', sizeW: 25, sizeH: 18, offsetX: -21, offsetY: -2 },
-    { color: 'rgba(175, 175, 175, 0.45)', sizeW: 21, sizeH: 24, offsetX: 66, offsetY: 0 },
-    { color: 'rgba(190, 190, 190, 0.52)', sizeW: 18, sizeH: 26, offsetX: -66, offsetY: -1 },
+    { color: "rgba(200, 200, 200, 0.48)", sizeW: 33, sizeH: 30, offsetX: 0, offsetY: 0 },
+    { color: "rgba(170, 170, 170, 0.42)", sizeW: 24, sizeH: 26, offsetX: 39, offsetY: -3 },
+    { color: "rgba(155, 155, 155, 0.48)", sizeW: 27, sizeH: 24, offsetX: -36, offsetY: 0 },
+    { color: "rgba(185, 185, 185, 0.42)", sizeW: 23, sizeH: 28, offsetX: -54, offsetY: -2 },
+    { color: "rgba(165, 165, 165, 0.50)", sizeW: 24, sizeH: 24, offsetX: 51, offsetY: -1 },
+    { color: "rgba(180, 180, 180, 0.45)", sizeW: 30, sizeH: 20, offsetX: 21, offsetY: 0 },
+    { color: "rgba(160, 160, 160, 0.40)", sizeW: 25, sizeH: 18, offsetX: -21, offsetY: -2 },
+    { color: "rgba(175, 175, 175, 0.45)", sizeW: 21, sizeH: 24, offsetX: 66, offsetY: 0 },
+    { color: "rgba(190, 190, 190, 0.52)", sizeW: 18, sizeH: 26, offsetX: -66, offsetY: -1 },
   ],
   ocean: [
-    { color: 'rgba(100, 80, 220, 0.48)', sizeW: 33, sizeH: 30, offsetX: 0, offsetY: 0 },
-    { color: 'rgba(60, 120, 255, 0.42)', sizeW: 24, sizeH: 26, offsetX: 39, offsetY: -3 },
-    { color: 'rgba(80, 100, 200, 0.48)', sizeW: 27, sizeH: 24, offsetX: -36, offsetY: 0 },
-    { color: 'rgba(130, 70, 255, 0.42)', sizeW: 23, sizeH: 28, offsetX: -54, offsetY: -2 },
-    { color: 'rgba(70, 130, 255, 0.50)', sizeW: 24, sizeH: 24, offsetX: 51, offsetY: -1 },
-    { color: 'rgba(120, 80, 255, 0.45)', sizeW: 30, sizeH: 20, offsetX: 21, offsetY: 0 },
-    { color: 'rgba(90, 110, 230, 0.40)', sizeW: 25, sizeH: 18, offsetX: -21, offsetY: -2 },
-    { color: 'rgba(110, 90, 240, 0.45)', sizeW: 21, sizeH: 24, offsetX: 66, offsetY: 0 },
-    { color: 'rgba(140, 100, 255, 0.52)', sizeW: 18, sizeH: 26, offsetX: -66, offsetY: -1 },
+    { color: "rgba(100, 80, 220, 0.48)", sizeW: 33, sizeH: 30, offsetX: 0, offsetY: 0 },
+    { color: "rgba(60, 120, 255, 0.42)", sizeW: 24, sizeH: 26, offsetX: 39, offsetY: -3 },
+    { color: "rgba(80, 100, 200, 0.48)", sizeW: 27, sizeH: 24, offsetX: -36, offsetY: 0 },
+    { color: "rgba(130, 70, 255, 0.42)", sizeW: 23, sizeH: 28, offsetX: -54, offsetY: -2 },
+    { color: "rgba(70, 130, 255, 0.50)", sizeW: 24, sizeH: 24, offsetX: 51, offsetY: -1 },
+    { color: "rgba(120, 80, 255, 0.45)", sizeW: 30, sizeH: 20, offsetX: 21, offsetY: 0 },
+    { color: "rgba(90, 110, 230, 0.40)", sizeW: 25, sizeH: 18, offsetX: -21, offsetY: -2 },
+    { color: "rgba(110, 90, 240, 0.45)", sizeW: 21, sizeH: 24, offsetX: 66, offsetY: 0 },
+    { color: "rgba(140, 100, 255, 0.52)", sizeW: 18, sizeH: 26, offsetX: -66, offsetY: -1 },
   ],
   sunset: [
-    { color: 'rgba(255, 100, 60, 0.48)', sizeW: 33, sizeH: 30, offsetX: 0, offsetY: 0 },
-    { color: 'rgba(255, 180, 50, 0.42)', sizeW: 24, sizeH: 26, offsetX: 39, offsetY: -3 },
-    { color: 'rgba(255, 140, 70, 0.48)', sizeW: 27, sizeH: 24, offsetX: -36, offsetY: 0 },
-    { color: 'rgba(255, 80, 80, 0.42)', sizeW: 23, sizeH: 28, offsetX: -54, offsetY: -2 },
-    { color: 'rgba(255, 200, 60, 0.50)', sizeW: 24, sizeH: 24, offsetX: 51, offsetY: -1 },
-    { color: 'rgba(255, 120, 50, 0.45)', sizeW: 30, sizeH: 20, offsetX: 21, offsetY: 0 },
-    { color: 'rgba(255, 160, 80, 0.40)', sizeW: 25, sizeH: 18, offsetX: -21, offsetY: -2 },
-    { color: 'rgba(255, 90, 60, 0.45)', sizeW: 21, sizeH: 24, offsetX: 66, offsetY: 0 },
-    { color: 'rgba(255, 70, 70, 0.52)', sizeW: 18, sizeH: 26, offsetX: -66, offsetY: -1 },
+    { color: "rgba(255, 100, 60, 0.48)", sizeW: 33, sizeH: 30, offsetX: 0, offsetY: 0 },
+    { color: "rgba(255, 180, 50, 0.42)", sizeW: 24, sizeH: 26, offsetX: 39, offsetY: -3 },
+    { color: "rgba(255, 140, 70, 0.48)", sizeW: 27, sizeH: 24, offsetX: -36, offsetY: 0 },
+    { color: "rgba(255, 80, 80, 0.42)", sizeW: 23, sizeH: 28, offsetX: -54, offsetY: -2 },
+    { color: "rgba(255, 200, 60, 0.50)", sizeW: 24, sizeH: 24, offsetX: 51, offsetY: -1 },
+    { color: "rgba(255, 120, 50, 0.45)", sizeW: 30, sizeH: 20, offsetX: 21, offsetY: 0 },
+    { color: "rgba(255, 160, 80, 0.40)", sizeW: 25, sizeH: 18, offsetX: -21, offsetY: -2 },
+    { color: "rgba(255, 90, 60, 0.45)", sizeW: 21, sizeH: 24, offsetX: 66, offsetY: 0 },
+    { color: "rgba(255, 70, 70, 0.52)", sizeW: 18, sizeH: 26, offsetX: -66, offsetY: -1 },
   ],
 };
 
 function getLineInnerGradients(colorVariant: BorderBeamColorVariant, id: string): string {
   const data = lineInnerGradientData[colorVariant];
   return data
-    .map(c => {
-      const offsetXStr = c.offsetX === 0 ? '' : (c.offsetX > 0 ? ` + ${c.offsetX}px` : ` - ${Math.abs(c.offsetX)}px`);
-      const offsetYStr = c.offsetY === 0 ? '' : ` - ${Math.abs(c.offsetY)}px`;
+    .map((c) => {
+      const offsetXStr =
+        c.offsetX === 0 ? "" : c.offsetX > 0 ? ` + ${c.offsetX}px` : ` - ${Math.abs(c.offsetX)}px`;
+      const offsetYStr = c.offsetY === 0 ? "" : ` - ${Math.abs(c.offsetY)}px`;
       return `radial-gradient(ellipse calc(${c.sizeW}px * var(--beam-w-${id})) calc(${c.sizeH}px * var(--beam-h-${id})) at calc(var(--beam-x-${id}) * 100%${offsetXStr}) calc(100%${offsetYStr}), ${c.color}, transparent)`;
     })
-    .join(',\n    ');
+    .join(",\n    ");
 }
 
 const lineBloomColors = {
   colorful: {
     dark: {
       spikes: [
-        { color1: 'rgb(100, 70, 255)', color2: 'rgba(100, 70, 255, 1)' },              // 36%
-        { color1: 'rgba(255, 170, 40, 0.59)', color2: 'rgba(255, 170, 40, 0.29)' },    // 50%
-        { color1: 'rgb(50, 200, 100)', color2: 'rgba(50, 200, 100, 1)' },              // 64%
-        { color1: 'rgba(200, 50, 240, 0.91)', color2: 'rgba(200, 50, 240, 0.45)' },    // 78%
-        { color1: 'rgb(40, 140, 255)', color2: 'rgba(40, 140, 255, 1)' },              // 92%
+        { color1: "rgb(100, 70, 255)", color2: "rgba(100, 70, 255, 1)" }, // 36%
+        { color1: "rgba(255, 170, 40, 0.59)", color2: "rgba(255, 170, 40, 0.29)" }, // 50%
+        { color1: "rgb(50, 200, 100)", color2: "rgba(50, 200, 100, 1)" }, // 64%
+        { color1: "rgba(200, 50, 240, 0.91)", color2: "rgba(200, 50, 240, 0.45)" }, // 78%
+        { color1: "rgb(40, 140, 255)", color2: "rgba(40, 140, 255, 1)" }, // 92%
       ],
     },
     light: {
       spikes: [
-        { color1: 'rgb(80, 50, 200)', color2: 'rgba(80, 50, 200, 0.8)' },      // 36%
-        { color1: 'rgba(210, 130, 0, 0.7)', color2: 'rgba(210, 130, 0, 0.46)' }, // 50%
-        { color1: 'rgb(30, 160, 70)', color2: 'rgba(30, 160, 70, 0.82)' },     // 64%
-        { color1: 'rgb(160, 30, 190)', color2: 'rgba(160, 30, 190, 0.7)' },    // 78%
-        { color1: 'rgb(30, 100, 200)', color2: 'rgba(30, 100, 200, 0.78)' },   // 92%
+        { color1: "rgb(80, 50, 200)", color2: "rgba(80, 50, 200, 0.8)" }, // 36%
+        { color1: "rgba(210, 130, 0, 0.7)", color2: "rgba(210, 130, 0, 0.46)" }, // 50%
+        { color1: "rgb(30, 160, 70)", color2: "rgba(30, 160, 70, 0.82)" }, // 64%
+        { color1: "rgb(160, 30, 190)", color2: "rgba(160, 30, 190, 0.7)" }, // 78%
+        { color1: "rgb(30, 100, 200)", color2: "rgba(30, 100, 200, 0.78)" }, // 92%
       ],
     },
   },
   mono: {
     dark: {
       spikes: [
-        { color1: 'rgb(200, 200, 200)', color2: 'rgba(200, 200, 200, 1)' },
-        { color1: 'rgba(180, 180, 180, 0.59)', color2: 'rgba(180, 180, 180, 0.29)' },
-        { color1: 'rgb(190, 190, 190)', color2: 'rgba(190, 190, 190, 1)' },
-        { color1: 'rgba(170, 170, 170, 0.91)', color2: 'rgba(170, 170, 170, 0.45)' },
-        { color1: 'rgb(185, 185, 185)', color2: 'rgba(185, 185, 185, 1)' },
+        { color1: "rgb(200, 200, 200)", color2: "rgba(200, 200, 200, 1)" },
+        { color1: "rgba(180, 180, 180, 0.59)", color2: "rgba(180, 180, 180, 0.29)" },
+        { color1: "rgb(190, 190, 190)", color2: "rgba(190, 190, 190, 1)" },
+        { color1: "rgba(170, 170, 170, 0.91)", color2: "rgba(170, 170, 170, 0.45)" },
+        { color1: "rgb(185, 185, 185)", color2: "rgba(185, 185, 185, 1)" },
       ],
     },
     light: {
       spikes: [
-        { color1: 'rgb(80, 80, 80)', color2: 'rgba(80, 80, 80, 0.8)' },
-        { color1: 'rgba(100, 100, 100, 0.7)', color2: 'rgba(100, 100, 100, 0.46)' },
-        { color1: 'rgb(70, 70, 70)', color2: 'rgba(70, 70, 70, 0.82)' },
-        { color1: 'rgb(90, 90, 90)', color2: 'rgba(90, 90, 90, 0.7)' },
-        { color1: 'rgb(85, 85, 85)', color2: 'rgba(85, 85, 85, 0.78)' },
+        { color1: "rgb(80, 80, 80)", color2: "rgba(80, 80, 80, 0.8)" },
+        { color1: "rgba(100, 100, 100, 0.7)", color2: "rgba(100, 100, 100, 0.46)" },
+        { color1: "rgb(70, 70, 70)", color2: "rgba(70, 70, 70, 0.82)" },
+        { color1: "rgb(90, 90, 90)", color2: "rgba(90, 90, 90, 0.7)" },
+        { color1: "rgb(85, 85, 85)", color2: "rgba(85, 85, 85, 0.78)" },
       ],
     },
   },
   ocean: {
     dark: {
       spikes: [
-        { color1: 'rgb(100, 80, 255)', color2: 'rgb(100, 80, 255)' },
-        { color1: 'rgba(80, 130, 220, 0.59)', color2: 'rgba(80, 130, 220, 0.29)' },
-        { color1: 'rgb(60, 100, 255)', color2: 'rgb(60, 100, 255)' },
-        { color1: 'rgba(90, 120, 200, 0.91)', color2: 'rgba(90, 120, 200, 0.45)' },
-        { color1: 'rgb(120, 90, 255)', color2: 'rgb(120, 90, 255)' },
+        { color1: "rgb(100, 80, 255)", color2: "rgb(100, 80, 255)" },
+        { color1: "rgba(80, 130, 220, 0.59)", color2: "rgba(80, 130, 220, 0.29)" },
+        { color1: "rgb(60, 100, 255)", color2: "rgb(60, 100, 255)" },
+        { color1: "rgba(90, 120, 200, 0.91)", color2: "rgba(90, 120, 200, 0.45)" },
+        { color1: "rgb(120, 90, 255)", color2: "rgb(120, 90, 255)" },
       ],
     },
     light: {
       spikes: [
-        { color1: 'rgb(50, 40, 180)', color2: 'rgba(50, 40, 180, 0.8)' },
-        { color1: 'rgba(40, 80, 200, 0.7)', color2: 'rgba(40, 80, 200, 0.46)' },
-        { color1: 'rgb(30, 50, 190)', color2: 'rgba(30, 50, 190, 0.82)' },
-        { color1: 'rgb(60, 90, 180)', color2: 'rgba(60, 90, 180, 0.7)' },
-        { color1: 'rgb(70, 60, 200)', color2: 'rgba(70, 60, 200, 0.78)' },
+        { color1: "rgb(50, 40, 180)", color2: "rgba(50, 40, 180, 0.8)" },
+        { color1: "rgba(40, 80, 200, 0.7)", color2: "rgba(40, 80, 200, 0.46)" },
+        { color1: "rgb(30, 50, 190)", color2: "rgba(30, 50, 190, 0.82)" },
+        { color1: "rgb(60, 90, 180)", color2: "rgba(60, 90, 180, 0.7)" },
+        { color1: "rgb(70, 60, 200)", color2: "rgba(70, 60, 200, 0.78)" },
       ],
     },
   },
   sunset: {
     dark: {
       spikes: [
-        { color1: 'rgb(255, 100, 80)', color2: 'rgb(255, 100, 80)' },
-        { color1: 'rgba(255, 150, 80, 0.59)', color2: 'rgba(255, 150, 80, 0.29)' },
-        { color1: 'rgb(255, 80, 60)', color2: 'rgb(255, 80, 60)' },
-        { color1: 'rgba(255, 120, 50, 0.91)', color2: 'rgba(255, 120, 50, 0.45)' },
-        { color1: 'rgb(255, 140, 70)', color2: 'rgb(255, 140, 70)' },
+        { color1: "rgb(255, 100, 80)", color2: "rgb(255, 100, 80)" },
+        { color1: "rgba(255, 150, 80, 0.59)", color2: "rgba(255, 150, 80, 0.29)" },
+        { color1: "rgb(255, 80, 60)", color2: "rgb(255, 80, 60)" },
+        { color1: "rgba(255, 120, 50, 0.91)", color2: "rgba(255, 120, 50, 0.45)" },
+        { color1: "rgb(255, 140, 70)", color2: "rgb(255, 140, 70)" },
       ],
     },
     light: {
       spikes: [
-        { color1: 'rgb(200, 60, 30)', color2: 'rgba(200, 60, 30, 0.8)' },
-        { color1: 'rgba(220, 100, 20, 0.7)', color2: 'rgba(220, 100, 20, 0.46)' },
-        { color1: 'rgb(180, 40, 20)', color2: 'rgba(180, 40, 20, 0.82)' },
-        { color1: 'rgb(210, 80, 10)', color2: 'rgba(210, 80, 10, 0.7)' },
-        { color1: 'rgb(190, 70, 30)', color2: 'rgba(190, 70, 30, 0.78)' },
+        { color1: "rgb(200, 60, 30)", color2: "rgba(200, 60, 30, 0.8)" },
+        { color1: "rgba(220, 100, 20, 0.7)", color2: "rgba(220, 100, 20, 0.46)" },
+        { color1: "rgb(180, 40, 20)", color2: "rgba(180, 40, 20, 0.82)" },
+        { color1: "rgb(210, 80, 10)", color2: "rgba(210, 80, 10, 0.7)" },
+        { color1: "rgb(190, 70, 30)", color2: "rgba(190, 70, 30, 0.78)" },
       ],
     },
   },
 };
 
 function withAlpha(color: string, alpha: number): string {
-  const rgbaMatch = color.match(/^rgba\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*[\d.]+\s*\)$/);
+  const rgbaMatch = color.match(
+    /^rgba\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*[\d.]+\s*\)$/,
+  );
   if (rgbaMatch) return `rgba(${rgbaMatch[1]}, ${rgbaMatch[2]}, ${rgbaMatch[3]}, ${alpha})`;
   const rgbMatch = color.match(/^rgb\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)\s*\)$/);
   if (rgbMatch) return `rgba(${rgbMatch[1]}, ${rgbMatch[2]}, ${rgbMatch[3]}, ${alpha})`;
@@ -546,49 +561,59 @@ function withAlpha(color: string, alpha: number): string {
 }
 
 function attenuateSpike(color: string, factor: number): string {
-  const rgbaMatch = color.match(/^rgba\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)\s*\)$/);
-  if (rgbaMatch) return `rgba(${rgbaMatch[1]}, ${rgbaMatch[2]}, ${rgbaMatch[3]}, ${(parseFloat(rgbaMatch[4]) * factor).toFixed(2)})`;
+  const rgbaMatch = color.match(
+    /^rgba\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)\s*\)$/,
+  );
+  if (rgbaMatch)
+    return `rgba(${rgbaMatch[1]}, ${rgbaMatch[2]}, ${rgbaMatch[3]}, ${(parseFloat(rgbaMatch[4]) * factor).toFixed(2)})`;
   const rgbMatch = color.match(/^rgb\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)\s*\)$/);
   if (rgbMatch) return `rgba(${rgbMatch[1]}, ${rgbMatch[2]}, ${rgbMatch[3]}, ${factor.toFixed(2)})`;
   return color;
 }
 
-function getLineBloomGradients(colorVariant: BorderBeamColorVariant, isDark: boolean, id: string): string {
+function getLineBloomGradients(
+  colorVariant: BorderBeamColorVariant,
+  isDark: boolean,
+  id: string,
+): string {
   const spikeColors = getSpikeColors(colorVariant, isDark);
-  const bloomData = lineBloomColors[colorVariant][isDark ? 'dark' : 'light'];
-  const isMono = colorVariant === 'mono';
+  const bloomData = lineBloomColors[colorVariant][isDark ? "dark" : "light"];
+  const isMono = colorVariant === "mono";
 
   // Mono uses uniform gray so thin spikes at full opacity look like harsh bars.
   // Attenuate opacity and widen the thin gradients so they appear as soft glows.
   const att = isMono ? 0.14 : 1;
-  const sc1     = isMono ? attenuateSpike(spikeColors.primary, 0.14) : spikeColors.primary;
+  const sc1 = isMono ? attenuateSpike(spikeColors.primary, 0.14) : spikeColors.primary;
   const sc1_mid = isMono ? attenuateSpike(spikeColors.primary, 0.09) : spikeColors.primary;
-  const sc2     = isMono ? attenuateSpike(spikeColors.secondary, 0.12) : spikeColors.secondary;
-  const sc2_mid = isMono ? withAlpha(spikeColors.secondary, 0.06) : withAlpha(spikeColors.secondary, 0.49);
+  const sc2 = isMono ? attenuateSpike(spikeColors.secondary, 0.12) : spikeColors.secondary;
+  const sc2_mid = isMono
+    ? withAlpha(spikeColors.secondary, 0.06)
+    : withAlpha(spikeColors.secondary, 0.49);
 
-  const spikes = bloomData.spikes.map(s => isMono
-    ? { color1: attenuateSpike(s.color1, att), color2: attenuateSpike(s.color2, att * 0.7) }
-    : s
+  const spikes = bloomData.spikes.map((s) =>
+    isMono
+      ? { color1: attenuateSpike(s.color1, att), color2: attenuateSpike(s.color2, att * 0.7) }
+      : s,
   );
 
   // Mono: wide, blurred soft spikes; shortened heights
-  const thinW1 = isMono ? '12px'  : '0.8px';
-  const thinW2 = isMono ? '14px'  : '2px';
-  const thinW3 = isMono ? '12px'  : '1.2px';
-  const thinW4 = isMono ? '10px'  : '0.6px';
-  const thinH1 = isMono ? '42px'  : '92px';
-  const thinH2 = isMono ? '38px'  : '72px';
-  const thinH3 = isMono ? '40px'  : '85px';
-  const thinH4 = isMono ? '32px'  : '60px';
-  const thinLW = isMono ? '12px'  : '1px';
+  const thinW1 = isMono ? "12px" : "0.8px";
+  const thinW2 = isMono ? "14px" : "2px";
+  const thinW3 = isMono ? "12px" : "1.2px";
+  const thinW4 = isMono ? "10px" : "0.6px";
+  const thinH1 = isMono ? "42px" : "92px";
+  const thinH2 = isMono ? "38px" : "72px";
+  const thinH3 = isMono ? "40px" : "85px";
+  const thinH4 = isMono ? "32px" : "60px";
+  const thinLW = isMono ? "12px" : "1px";
 
   // Main glow: center dot + ambient — mono gets 50% lower opacity
-  const glowDotC   = isMono ? 'rgba(255, 255, 255, 0.5)'  : 'rgba(255, 255, 255, 1)';
-  const glowDot20  = isMono ? 'rgba(255, 255, 255, 0.45)' : 'rgba(255, 255, 255, 0.9)';
-  const glowDot50  = isMono ? 'rgba(255, 255, 255, 0.25)' : 'rgba(255, 255, 255, 0.5)';
-  const glowAmbC   = isMono ? 'rgba(255, 255, 255, 0.15)' : 'rgba(255, 255, 255, 0.3)';
-  const glowAmb25  = isMono ? 'rgba(255, 255, 255, 0.06)' : 'rgba(255, 255, 255, 0.12)';
-  const glowAmb55  = isMono ? 'rgba(255, 255, 255, 0.015)': 'rgba(255, 255, 255, 0.03)';
+  const glowDotC = isMono ? "rgba(255, 255, 255, 0.5)" : "rgba(255, 255, 255, 1)";
+  const glowDot20 = isMono ? "rgba(255, 255, 255, 0.45)" : "rgba(255, 255, 255, 0.9)";
+  const glowDot50 = isMono ? "rgba(255, 255, 255, 0.25)" : "rgba(255, 255, 255, 0.5)";
+  const glowAmbC = isMono ? "rgba(255, 255, 255, 0.15)" : "rgba(255, 255, 255, 0.3)";
+  const glowAmb25 = isMono ? "rgba(255, 255, 255, 0.06)" : "rgba(255, 255, 255, 0.12)";
+  const glowAmb55 = isMono ? "rgba(255, 255, 255, 0.015)" : "rgba(255, 255, 255, 0.03)";
 
   if (isDark) {
     return `radial-gradient(ellipse calc(${thinW1} * var(--beam-spike-${id})) calc(${thinH1} * var(--beam-h-${id})) at 8% calc(100% - 2px), ${sc1}, ${sc1_mid} 30%, transparent 88%),
@@ -601,8 +626,12 @@ function getLineBloomGradients(colorVariant: BorderBeamColorVariant, isDark: boo
        radial-gradient(ellipse calc(21px * var(--beam-spike-${id})) calc(15px * var(--beam-spike2-${id})) at calc(var(--beam-x-${id}) * 100%) calc(100% + 1px), ${glowDotC} 0%, ${glowDot20} 20%, ${glowDot50} 50%, transparent 100%),
        radial-gradient(ellipse calc(42px * var(--beam-w-${id})) calc(40px * var(--beam-h-${id})) at calc(var(--beam-x-${id}) * 100%) 100%, ${glowAmbC} 0%, ${glowAmb25} 25%, ${glowAmb55} 55%, transparent 80%)`;
   } else {
-    const sc1_lt = isMono ? attenuateSpike(spikeColors.primary, 0.11) : withAlpha(spikeColors.primary, 0.85);
-    const sc2_lt = isMono ? attenuateSpike(spikeColors.secondary, 0.09) : withAlpha(spikeColors.secondary, 0.7);
+    const sc1_lt = isMono
+      ? attenuateSpike(spikeColors.primary, 0.11)
+      : withAlpha(spikeColors.primary, 0.85);
+    const sc2_lt = isMono
+      ? attenuateSpike(spikeColors.secondary, 0.09)
+      : withAlpha(spikeColors.secondary, 0.7);
     return `radial-gradient(ellipse calc(${thinW1} * var(--beam-spike-${id})) calc(${thinH1} * var(--beam-h-${id})) at 8% calc(100% - 2px), ${sc1}, ${sc1_lt} 30%, transparent 88%),
        radial-gradient(ellipse calc(10px * var(--beam-spike2-${id})) calc(35px * var(--beam-h-${id})) at 22% calc(100% - 4px), ${sc2}, ${sc2_lt} 50%, transparent 95%),
        radial-gradient(ellipse calc(${thinW2} * (2 - var(--beam-spike-${id}))) calc(${thinH2} * var(--beam-h-${id})) at 36% calc(100% - 3px), ${spikes[0].color1}, ${spikes[0].color2} 40%, transparent 90%),
@@ -623,13 +652,13 @@ interface GenerateStylesOptions {
   innerOpacity: number;
   bloomOpacity: number;
   innerShadow: string;
-  size: 'sm' | 'md' | 'line';
+  size: "sm" | "md" | "line";
   colorVariant: BorderBeamColorVariant;
   staticColors: boolean;
   brightness: number;
   saturation: number;
   hueRange: number;
-  theme: 'dark' | 'light';
+  theme: "dark" | "light";
 }
 
 /**
@@ -638,11 +667,11 @@ interface GenerateStylesOptions {
 export function generateBeamCSS(options: GenerateStylesOptions): string {
   const { size } = options;
 
-  if (size === 'line') {
+  if (size === "line") {
     return generateLineVariantCSS(options);
   }
-  
-  if (size === 'sm') {
+
+  if (size === "sm") {
     return generateSmallVariantCSS(options);
   }
 
@@ -668,25 +697,27 @@ function generateSmallVariantCSS(options: GenerateStylesOptions): string {
   } = options;
 
   const innerRadius = Math.max(0, borderRadius - borderWidth);
-  
-  const monoOpacityMultiplier = colorVariant === 'mono' ? 0.5 : 1.0;
+
+  const monoOpacityMultiplier = colorVariant === "mono" ? 0.5 : 1.0;
   const finalStrokeOpacity = strokeOpacity * monoOpacityMultiplier;
   const finalInnerOpacity = innerOpacity * monoOpacityMultiplier;
   const finalBloomOpacity = bloomOpacity * monoOpacityMultiplier;
-  
-  const hueShiftAnimation = staticColors 
-    ? '' 
+
+  const hueShiftAnimation = staticColors
+    ? ""
     : `animation: beam-hue-shift-${id} 12s ease-in-out infinite;`;
-  
-  const hueShiftKeyframes = staticColors ? '' : `
+
+  const hueShiftKeyframes = staticColors
+    ? ""
+    : `
 @keyframes beam-hue-shift-${id} {
   0% { filter: hue-rotate(-${hueRange}deg) brightness(${brightness.toFixed(2)}) saturate(${saturation.toFixed(2)}); }
   50% { filter: hue-rotate(${hueRange}deg) brightness(${brightness.toFixed(2)}) saturate(${saturation.toFixed(2)}); }
   100% { filter: hue-rotate(-${hueRange}deg) brightness(${brightness.toFixed(2)}) saturate(${saturation.toFixed(2)}); }
 }`;
 
-  const isDark = theme === 'dark';
-  
+  const isDark = theme === "dark";
+
   const whiteGradient = isDark
     ? `conic-gradient(
         from var(--beam-angle-${id}),
@@ -906,26 +937,28 @@ function generateBorderVariantCSS(options: GenerateStylesOptions): string {
   } = options;
 
   const innerRadius = Math.max(0, borderRadius - borderWidth);
-  
+
   // Mono variant gets 50% lower opacity
-  const monoOpacityMultiplier = colorVariant === 'mono' ? 0.5 : 1.0;
+  const monoOpacityMultiplier = colorVariant === "mono" ? 0.5 : 1.0;
   const finalStrokeOpacity = strokeOpacity * monoOpacityMultiplier;
   const finalInnerOpacity = innerOpacity * monoOpacityMultiplier;
   const finalBloomOpacity = bloomOpacity * monoOpacityMultiplier;
-  
-  const hueShiftAnimation = staticColors 
-    ? '' 
+
+  const hueShiftAnimation = staticColors
+    ? ""
     : `animation: beam-hue-shift-${id} 12s ease-in-out infinite;`;
-  
-  const hueShiftKeyframes = staticColors ? '' : `
+
+  const hueShiftKeyframes = staticColors
+    ? ""
+    : `
 @keyframes beam-hue-shift-${id} {
   0% { filter: hue-rotate(-${hueRange}deg) brightness(${brightness.toFixed(2)}) saturate(${saturation.toFixed(2)}); }
   50% { filter: hue-rotate(${hueRange}deg) brightness(${brightness.toFixed(2)}) saturate(${saturation.toFixed(2)}); }
   100% { filter: hue-rotate(-${hueRange}deg) brightness(${brightness.toFixed(2)}) saturate(${saturation.toFixed(2)}); }
 }`;
 
-  const isDark = theme === 'dark';
-  
+  const isDark = theme === "dark";
+
   const whiteGradient = isDark
     ? `conic-gradient(
         from var(--beam-angle-${id}),
@@ -1155,21 +1188,23 @@ function generateLineVariantCSS(options: GenerateStylesOptions): string {
   } = options;
 
   const innerRadius = Math.max(0, borderRadius - borderWidth);
-  const isDark = theme === 'dark';
-  
+  const isDark = theme === "dark";
+
   const finalStrokeOpacity = strokeOpacity;
   const finalInnerOpacity = innerOpacity;
   const finalBloomOpacity = bloomOpacity;
-  
-  const hueShiftAnimation = staticColors 
-    ? '' 
+
+  const hueShiftAnimation = staticColors
+    ? ""
     : `animation: beam-hue-shift-${id} 12s ease-in-out infinite;`;
 
   const hueShiftBloomAnimation = staticColors
-    ? ''
+    ? ""
     : `animation: beam-hue-shift-bloom-${id} 8s ease-in-out infinite;`;
-  
-  const hueShiftKeyframes = staticColors ? '' : `
+
+  const hueShiftKeyframes = staticColors
+    ? ""
+    : `
 @keyframes beam-hue-shift-${id} {
   0% { filter: hue-rotate(-${hueRange}deg) brightness(${brightness.toFixed(2)}) saturate(${saturation.toFixed(2)}); }
   50% { filter: hue-rotate(${hueRange}deg) brightness(${brightness.toFixed(2)}) saturate(${saturation.toFixed(2)}); }
@@ -1200,7 +1235,7 @@ function generateLineVariantCSS(options: GenerateStylesOptions): string {
   const innerGradients = getLineInnerGradients(colorVariant, id);
 
   const bloomGradients = getLineBloomGradients(colorVariant, isDark, id);
-  const monoBloomBlur = colorVariant === 'mono' ? 'filter: blur(6px);' : '';
+  const monoBloomBlur = colorVariant === "mono" ? "filter: blur(6px);" : "";
 
   return `
 @property --beam-x-${id} {

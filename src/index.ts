@@ -1,4 +1,4 @@
-export { default as BorderBeam } from './BorderBeam.vue'
+export { default as BorderBeam } from "./BorderBeam.vue";
 
 export type {
   BorderBeamProps,
@@ -7,6 +7,6 @@ export type {
   BorderBeamColorVariant,
   SizeConfig,
   ThemeColors,
-} from './types'
+} from "./types";
 
-export { sizePresets, sizeThemePresets, themeColors } from './styles'
+export { sizePresets, sizeThemePresets, themeColors } from "./styles";

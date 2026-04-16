@@ -10,7 +10,7 @@ npm install vue-border-beam
 
 ```vue
 <script setup>
-import { BorderBeam } from 'vue-border-beam'
+import { BorderBeam } from "vue-border-beam";
 </script>
 
 <template>

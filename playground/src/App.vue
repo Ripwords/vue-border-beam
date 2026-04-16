@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { BorderBeam } from 'vue-border-beam'
-import type { BorderBeamSize, BorderBeamColorVariant, BorderBeamTheme } from 'vue-border-beam'
+import { ref } from "vue";
+import { BorderBeam } from "vue-border-beam";
+import type { BorderBeamSize, BorderBeamColorVariant, BorderBeamTheme } from "vue-border-beam";
 
-const size = ref<BorderBeamSize>('md')
-const colorVariant = ref<BorderBeamColorVariant>('colorful')
-const theme = ref<BorderBeamTheme>('dark')
-const active = ref(true)
-const strength = ref(1)
-const duration = ref(1.96)
+const size = ref<BorderBeamSize>("md");
+const colorVariant = ref<BorderBeamColorVariant>("colorful");
+const theme = ref<BorderBeamTheme>("dark");
+const active = ref(true);
+const strength = ref(1);
+const duration = ref(1.96);
 
-const sizes: BorderBeamSize[] = ['sm', 'md', 'line']
-const colors: BorderBeamColorVariant[] = ['colorful', 'mono', 'ocean', 'sunset']
-const themes: BorderBeamTheme[] = ['dark', 'light', 'auto']
+const sizes: BorderBeamSize[] = ["sm", "md", "line"];
+const colors: BorderBeamColorVariant[] = ["colorful", "mono", "ocean", "sunset"];
+const themes: BorderBeamTheme[] = ["dark", "light", "auto"];
 </script>
 
 <template>
@@ -116,7 +116,7 @@ const themes: BorderBeamTheme[] = ['dark', 'light', 'auto']
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 .app {
@@ -163,7 +163,8 @@ label {
   font-size: 0.875rem;
 }
 
-select, input[type="range"] {
+select,
+input[type="range"] {
   cursor: pointer;
 }
 
@@ -217,7 +218,8 @@ select, input[type="range"] {
   margin-bottom: 0.5rem;
 }
 
-.card p, .card span {
+.card p,
+.card span {
   opacity: 0.6;
   font-size: 0.875rem;
 }
