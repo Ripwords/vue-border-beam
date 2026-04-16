@@ -3,6 +3,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "vue-border-beam",
   description: "Animated border beam effect for Vue 3",
+  base: "/vue-border-beam/",
   themeConfig: {
     nav: [
       { text: "Guide", link: "/guide/getting-started" },
@@ -26,6 +27,6 @@ export default defineConfig({
         ],
       },
     ],
-    socialLinks: [{ icon: "github", link: "https://github.com/" }],
+    socialLinks: [{ icon: "github", link: "https://github.com/Ripwords/vue-border-beam" }],
   },
 });
