@@ -1,5 +1,6 @@
 # Color Variants
 
+<ClientOnly>
 <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; padding: 2rem; background: #0a0a0a; border-radius: 12px;">
   <div v-for="color in ['colorful', 'mono', 'ocean', 'sunset']" :key="color">
     <p style="color: #fff; opacity: 0.5; margin-bottom: 0.5rem; font-size: 0.875rem;">{{ color }}</p>
@@ -10,3 +11,4 @@
     </BorderBeam>
   </div>
 </div>
+</ClientOnly>

@@ -1,5 +1,7 @@
 # Size Variants
 
+<ClientOnly>
+
 ## Medium (md) — Full Border Glow
 
 <div style="padding: 2rem; background: #0a0a0a; border-radius: 12px; margin-bottom: 1.5rem;">
@@ -29,3 +31,5 @@
     </div>
   </BorderBeam>
 </div>
+
+</ClientOnly>

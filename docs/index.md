@@ -26,6 +26,7 @@ features:
 
 ## See it in action
 
+<ClientOnly>
 <div class="demo-grid">
   <BorderBeam>
     <div class="demo-card">
@@ -71,6 +72,7 @@ features:
     <div class="demo-input">Search for something...</div>
   </BorderBeam>
 </div>
+</ClientOnly>
 
 ### Installation
 
