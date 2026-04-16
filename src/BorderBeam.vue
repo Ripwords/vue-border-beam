@@ -1,3 +1,8 @@
+<script lang="ts">
+// Module-level counter — persists across component instances
+let idCounter = 0
+</script>
+
 <script setup lang="ts">
 import { ref, computed, watch, onMounted, onUnmounted, type StyleValue } from 'vue'
 import type { BorderBeamProps, BorderBeamTheme } from './types'
@@ -20,8 +25,7 @@ const emit = defineEmits<{
   deactivate: []
 }>()
 
-// Generate unique ID per instance
-let idCounter = 0
+// Unique ID per instance (counter is module-scoped, increments across instances)
 const id = `beam-${++idCounter}`
 
 const systemTheme = useSystemTheme()
